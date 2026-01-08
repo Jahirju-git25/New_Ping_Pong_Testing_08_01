@@ -1,0 +1,328 @@
+/************************************************************************************
+ * Copyright (C) 2023                                                               *
+ * TETCOS, Bangalore. India                                                         *
+ *                                                                                  *
+ * Tetcos owns the intellectual property rights in the Product and its content.     *
+ * The copying, redistribution, reselling or publication of any or all of the       *
+ * Product or its content without express prior written consent of Tetcos is        *
+ * prohibited. Ownership and / or any other right relating to the software and all  *
+ * intellectual property rights therein shall remain at all times with Tetcos.      *
+ *                                                                                  *
+ * Author:    Shashi Kant Suman                                                     *
+ *                                                                                  *
+ * ---------------------------------------------------------------------------------*/
+#include "main.h"
+#include "Aloha.h"
+#include "Aloha_enum.h"
+#include "../UWAN/UWAN.h"
+#include "AdvancedPlots.h"
+#pragma comment(lib,"AdvancedPlots.lib")
+#include "../BatteryModel/BatteryModel.h"
+
+typedef struct stru_packetList
+{
+	NetSim_PACKET* head;
+	NetSim_PACKET* tail;
+}PACKETLIST, *ptrPACKETLIST;
+
+PACKETLIST txPacketList;
+
+static void add_packet_to_txList(NetSim_PACKET* packet)
+{
+	if (txPacketList.head)
+	{
+		txPacketList.tail->pstruNextPacket = packet;
+		txPacketList.tail = packet;
+	}
+	else
+	{
+		txPacketList.head = packet;
+		txPacketList.tail = packet;
+	}
+}
+static bool check_packet_in_txList(NETSIM_ID tx)
+
+{
+	NetSim_PACKET* t = txPacketList.head;
+	while (t)
+	{
+		if (t->nTransmitterId == tx)
+			return true;
+		t = t->pstruNextPacket;
+	}
+	return false;
+}
+
+static void remove_packet_from_txList(NetSim_PACKET* packet)
+{
+	NetSim_PACKET* t = txPacketList.head;
+	NetSim_PACKET* p = NULL;
+	while (t)
+	{
+		if (t == packet)
+		{
+			if (t == txPacketList.head)
+			{
+				txPacketList.head = t->pstruNextPacket;
+				if (!txPacketList.head)
+					txPacketList.tail = NULL;
+			}
+			else
+			{
+				p->pstruNextPacket = t->pstruNextPacket;
+				if (!t->pstruNextPacket)
+					txPacketList.tail = p;
+			}
+			packet->pstruNextPacket = NULL;
+			break;
+		}
+		p = t;
+		t = t->pstruNextPacket;
+	}
+}
+
+static void mark_packet_for_collision()
+{
+	NetSim_PACKET* p = txPacketList.head;
+	while (p)
+	{
+		PALOHA_PHY_VAR phy = ALOHA_PHY(p->nReceiverId, 1);
+		
+		double power = get_received_power(p->nTransmitterId, p->nReceiverId, p->pstruPhyData->dArrivalTime);
+		double interference = substract_power_in_dbm(phy->dInterferencePower, power);
+
+		if ( interference > phy->rx_sensitivity)
+			p->nPacketStatus = PacketStatus_Collided;
+
+		p = p->pstruNextPacket;
+	}
+}
+
+static void update_interference_power(NETSIM_ID tx,
+									  NETSIM_ID rx,
+									  double time,
+									  bool isAdd)
+{
+	rx;
+	NETSIM_ID i;
+	PALOHA_PHY_VAR phy;
+	for (i = 0; i < NETWORK->nDeviceCount; i++)
+	{
+		if (i + 1 == tx)
+			continue;
+
+		phy = ALOHA_PHY(i + 1, 1);
+		double p = phy->dInterferencePower;
+		if (isAdd)
+			phy->dInterferencePower = add_power_in_dbm(p,
+													   get_received_power(tx, i + 1, time));
+		else
+			phy->dInterferencePower = substract_power_in_dbm(p,
+															 get_received_power(tx, i + 1, time));
+	}
+}
+
+static double calulate_transmission_time(NetSim_PACKET* packet)
+{
+	double size=fnGetPacketSize(packet);
+	NETSIM_ID source=packet->nTransmitterId;
+	PALOHA_PHY_VAR phy = ALOHA_PHY(source,1);
+	double dDataRate=phy->data_rate;
+	double dTxTime= size*8.0/dDataRate;
+	return dTxTime;
+}
+
+static double calculate_propagation_delay(NetSim_PACKET* packet)
+{
+	NETSIM_ID source = packet->nTransmitterId;
+	NETSIM_ID destination = packet->nReceiverId;
+	double dPropagationDelay = UWAN_calculate_propagation_delay(source, 1,
+																destination, 1,
+																get_aloha_propagation_info(source, destination));
+	return dPropagationDelay;
+}
+
+static void transmit_packet(NetSim_PACKET* packet, bool* flag)
+{
+	PALOHA_PHY_VAR phy = ALOHA_PHY(packet->nReceiverId,1);
+	PALOHA_PHY_VAR phyt = ALOHA_PHY(packet->nTransmitterId,1);
+	double power = get_received_power(packet->nTransmitterId, packet->nReceiverId,
+									  packet->pstruPhyData->dArrivalTime);
+	
+	ptrBATTERY battery = phyt->battery;
+
+	if(power < phy->rx_sensitivity)
+	{
+		set_radio_state(pstruEventDetails->nDeviceId, 1, RX_ON_IDLE);
+		packet->nPacketStatus=PacketStatus_Error;
+	}
+	if (battery)
+	{
+		if (phyt->transmitter_status == RX_OFF)
+			return false;
+	}
+	set_radio_state(pstruEventDetails->nDeviceId, 1, TRX_ON_BUSY);
+
+	set_radio_state(packet->nReceiverId, 1, RX_ON_BUSY);
+	//Add physical in event
+	pstruEventDetails->dEventTime=packet->pstruPhyData->dEndTime;
+	packet->pstruPhyData->dEndTime = pstruEventDetails->dEventTime;
+	pstruEventDetails->dPacketSize=packet->pstruPhyData->dPacketSize;
+	pstruEventDetails->nDeviceId=packet->nReceiverId;
+	pstruEventDetails->nDeviceType=DEVICE_TYPE(packet->nReceiverId);
+	pstruEventDetails->nEventType=PHYSICAL_IN_EVENT;
+	pstruEventDetails->nInterfaceId=1;
+	pstruEventDetails->pPacket=packet;
+	fnpAddEvent(pstruEventDetails);
+	
+	add_packet_to_txList(packet);
+	if (!*flag)
+		update_interference_power(packet->nTransmitterId,
+								  packet->nReceiverId,
+								  packet->pstruPhyData->dArrivalTime,
+								  true);
+	*flag = true;
+	mark_packet_for_collision();
+}
+
+int fn_NetSim_Aloha_PhyOut()
+{
+	double dTxTime;
+	double dPropagationDelay;
+	double receptionTime;
+	NetSim_PACKET* packet= pstruEventDetails->pPacket;
+	packet->pstruPhyData->dArrivalTime=pstruEventDetails->dEventTime;
+	packet->pstruPhyData->dPayload=packet->pstruMacData->dPacketSize;
+	packet->pstruPhyData->dOverhead=ALOHA_PHY_OVERHEAD;
+	packet->pstruPhyData->dPacketSize=packet->pstruPhyData->dOverhead+packet->pstruPhyData->dPayload;
+	packet->pstruPhyData->dStartTime=pstruEventDetails->dEventTime;
+
+	bool flag = false;
+	if(packet->nReceiverId)
+	{
+		dTxTime = calulate_transmission_time(packet);
+		dPropagationDelay = calculate_propagation_delay(packet);
+		packet->pstruPhyData->dStartTime = packet->pstruPhyData->dArrivalTime + dTxTime;
+		packet->pstruPhyData->dEndTime = packet->pstruPhyData->dStartTime + dPropagationDelay;
+		receptionTime = packet->pstruPhyData->dEndTime - packet->pstruPhyData->dArrivalTime;
+		PALOHA_MAC_VAR mac = ALOHA_CURR_MAC;
+		if (mac->isSlotted) 
+		{
+			if (receptionTime > mac->slotlength)
+			{
+				fnNetSimError("The slot length for the scenario has not been set properly, it should be greater than %lf.\n", receptionTime);
+				return 0;
+			}
+		}
+		transmit_packet(packet, &flag);
+	}
+	else
+	{
+		//Broadcast packet
+		NETSIM_ID loop;
+		for(loop=0;loop<NETWORK->nDeviceCount;loop++)
+		{
+			if(loop+1!=packet->nTransmitterId)
+			{
+				NetSim_PACKET* p = fn_NetSim_Packet_CopyPacket(packet);
+				//Add physical in event
+				p->nReceiverId=loop+1;
+				dTxTime = calulate_transmission_time(p);
+				dPropagationDelay = calculate_propagation_delay(p);
+				p->pstruPhyData->dStartTime = p->pstruPhyData->dArrivalTime + dTxTime;
+				p->pstruPhyData->dEndTime = p->pstruPhyData->dStartTime + dPropagationDelay;
+				receptionTime = p->pstruPhyData->dEndTime - p->pstruPhyData->dArrivalTime;
+				PALOHA_MAC_VAR mac = ALOHA_CURR_MAC;
+				if (mac->isSlotted)
+				{
+					if (receptionTime > mac->slotlength) 
+					{
+						fnNetSimError("The slot length for the scenario has not been set properly, it should be greater than %lf.\n", receptionTime);
+						return 0;
+					}
+				}
+				transmit_packet(p, &flag);
+			}
+		}
+		fn_NetSim_Packet_FreePacket(packet);
+	}
+	return 0;
+}
+
+static void notify_src(NETSIM_ID tx,
+					   bool isError)
+{
+	double acktime = 0;
+	NetSim_EVENTDETAILS pevent;
+	memset(&pevent, 0, sizeof pevent);
+	pevent.dEventTime = pstruEventDetails->dEventTime + acktime;
+	pevent.nDeviceId = tx;
+	pevent.nDeviceType = DEVICE_TYPE(tx);
+	pevent.nEventType = MAC_OUT_EVENT;
+	pevent.nInterfaceId = 1;
+	pevent.nProtocolId = MAC_PROTOCOL_ALOHA;
+	pevent.nSubEventType = isError ? ALOHA_PACKET_ERROR : ALOHA_PACKET_SUCCESS;
+	fnpAddEvent(&pevent);
+}
+
+void fn_NetSim_Aloha_PhyIn()
+{
+	PALOHA_PHY_VAR phy = ALOHA_CURR_PHY;
+	double ber;
+	NetSim_PACKET* packet = pstruEventDetails->pPacket;
+	NETSIM_ID tx = packet->nTransmitterId;
+	NETSIM_ID rx = packet->nReceiverId;
+
+	if (isBroadcastPacket(packet))
+	{
+		if ((tx == 1 && rx == 2) ||
+			rx == 1)
+			update_interference_power(tx, rx,
+									  packet->pstruPhyData->dArrivalTime, false);
+	}
+	else
+	{
+		update_interference_power(tx, rx,
+								  packet->pstruPhyData->dArrivalTime, false);
+	}
+
+	remove_packet_from_txList(packet);
+
+	set_radio_state(packet->nTransmitterId, 1, RX_ON_IDLE);
+	set_radio_state(packet->nReceiverId, 1, RX_ON_IDLE);
+
+
+	if(pstruEventDetails->pPacket->nPacketStatus == PacketStatus_Collided)
+		goto RET_PHYIN;
+
+	ber = UWAN_Calculate_ber(tx, rx,
+							 get_aloha_propagation_info(tx, rx),
+							 get_received_power(tx, rx, packet->pstruPhyData->dArrivalTime),
+							 phy->modulation,
+							 phy->data_rate * 1000,
+							 phy->bandwidth * 1000);
+
+	packet->nPacketStatus =	fn_NetSim_Packet_DecideError(ber, packet->pstruPhyData->dPacketSize);
+
+	if(packet->nPacketStatus == PacketStatus_Error)
+		goto RET_PHYIN;
+
+	pstruEventDetails->nEventType = MAC_IN_EVENT;
+	fnpAddEvent(pstruEventDetails);
+
+RET_PHYIN:
+	fn_NetSim_WritePacketTrace(packet);
+	fn_NetSim_Metrics_Add(packet);
+	LinkPacketLog();
+	if (pstruEventDetails->pPacket->nPacketStatus != PacketStatus_NoError)
+	{
+		if(!check_packet_in_txList(tx))
+			notify_src(tx, true);
+		fn_NetSim_Packet_FreePacket(packet);
+	}
+	else
+	{
+		if (!check_packet_in_txList(tx))
+			notify_src(tx, false);
+	}
+}

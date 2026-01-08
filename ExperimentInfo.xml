@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NETSIM_EXPERIMENTS NAME="Ping_Pong_Test">
+  <EXPERIMENT>
+    <NAME>RL_based_Power_Control_3x6</NAME>
+    <DATE>11/20/2024 10:02 AM</DATE>
+    <NETWORK>5G_NR_mmWave</NETWORK>
+  </EXPERIMENT>
+  <EXPERIMENT>
+    <NAME>RL_based_Power_Control_4x11</NAME>
+    <DATE>11/20/2024 2:34 PM</DATE>
+    <NETWORK>5G_NR_mmWave</NETWORK>
+  </EXPERIMENT>
+  <EXPERIMENT>
+    <NAME>RL_based_Power_Control_7x20</NAME>
+    <DATE>11/20/2024 2:34 PM</DATE>
+    <NETWORK>5G_NR_mmWave</NETWORK>
+  </EXPERIMENT>
+  <EXPERIMENT>
+    <NAME>AutoSave</NAME>
+    <DATE>12/22/2025 4:09 PM</DATE>
+    <NETWORK>Folder</NETWORK>
+  </EXPERIMENT>
+  <EXPERIMENT>
+    <NAME>Ping_Pong_22_Dec_25</NAME>
+    <DATE>01/02/2026 5:16 PM</DATE>
+    <NETWORK>5G_NR_mmWave</NETWORK>
+  </EXPERIMENT>
+</NETSIM_EXPERIMENTS>

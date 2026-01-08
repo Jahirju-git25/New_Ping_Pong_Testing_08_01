@@ -1,0 +1,4 @@
+﻿  Listener.c
+C:\Users\Paul\Documents\NetSim\Workspaces\NetSim_Python_Interface\src\Simulation\NetSim_Server\Listener.c(118,64): warning C4267: 'function': conversion from 'size_t' to 'int', possible loss of data
+MSVCRT.lib(exe_main.obj) : error LNK2001: unresolved external symbol main
+C:\Users\Paul\Documents\NetSim\Workspaces\NetSim_Python_Interface\src\Simulation\x64\Release\NetSim_Server.exe : fatal error LNK1120: 1 unresolved externals

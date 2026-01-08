@@ -1,0 +1,4 @@
+#
+# Ports 5053 and 5265 must be open in your firewall for outgoing connections.
+#
+CUSTOMER jdvu-kolkata-etce isv=tetcos server=ls71.rlmcloud.com port=5053 password=yk3kwv7buoseb3jb

@@ -1,0 +1,2617 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<NetSim_Metrics>
+ <!--NETSIM_METRICS-->
+ <MENU Name="Link_Metrics">
+  <TABLE name="Link_Metrics">
+   <TH name="Link ID" isShow="true"/>
+   <TH name="Packets Transmitted" isShow="true">
+    <TH name="Data"/>
+    <TH name="Control"/>
+   </TH>
+   <TH name="Packets Errored" isShow="true">
+    <TH name="Data"/>
+    <TH name="Control"/>
+   </TH>
+   <TH name="Packets Collided" isShow="true">
+    <TH name="Data"/>
+    <TH name="Control"/>
+   </TH>
+   <TH name="Bytes Transmitted(bytes)" isShow="false"/>
+   <TH name="Payload Transmitted(bytes)" isShow="false"/>
+   <TH name="Overhead Transmitted(bytes)" isShow="false"/>
+   <TR>
+    <TC Value="All"/>
+    <TC Value="1415524"/>
+    <TC Value="110"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="2133922186"/>
+    <TC Value="2066665040"/>
+    <TC Value="67257146"/>
+   </TR>
+   <TR>
+    <TC Value="1"/>
+    <TC Value="0"/>
+    <TC Value="22"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="3608"/>
+    <TC Value="0"/>
+    <TC Value="3608"/>
+   </TR>
+   <TR>
+    <TC Value="2"/>
+    <TC Value="0"/>
+    <TC Value="22"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="3608"/>
+    <TC Value="0"/>
+    <TC Value="3608"/>
+   </TR>
+   <TR>
+    <TC Value="3"/>
+    <TC Value="0"/>
+    <TC Value="33"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="6270"/>
+    <TC Value="0"/>
+    <TC Value="6270"/>
+   </TR>
+   <TR>
+    <TC Value="4"/>
+    <TC Value="353881"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="535775834"/>
+    <TC Value="516666260"/>
+    <TC Value="19109574"/>
+   </TR>
+   <TR>
+    <TC Value="5"/>
+    <TC Value="353881"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="526574928"/>
+    <TC Value="516666260"/>
+    <TC Value="9908668"/>
+   </TR>
+   <TR>
+    <TC Value="6"/>
+    <TC Value="353881"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="535775834"/>
+    <TC Value="516666260"/>
+    <TC Value="19109574"/>
+   </TR>
+   <TR>
+    <TC Value="7"/>
+    <TC Value="0"/>
+    <TC Value="9"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="1710"/>
+    <TC Value="0"/>
+    <TC Value="1710"/>
+   </TR>
+   <TR>
+    <TC Value="8"/>
+    <TC Value="96513"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="146120682"/>
+    <TC Value="140908980"/>
+    <TC Value="5211702"/>
+   </TR>
+   <TR>
+    <TC Value="9"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+   </TR>
+   <TR>
+    <TC Value="10"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+   </TR>
+   <TR>
+    <TC Value="11"/>
+    <TC Value="0"/>
+    <TC Value="9"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="1710"/>
+    <TC Value="0"/>
+    <TC Value="1710"/>
+   </TR>
+   <TR>
+    <TC Value="12"/>
+    <TC Value="96513"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="146120682"/>
+    <TC Value="140908980"/>
+    <TC Value="5211702"/>
+   </TR>
+   <TR>
+    <TC Value="13"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+   </TR>
+   <TR>
+    <TC Value="15"/>
+    <TC Value="0"/>
+    <TC Value="9"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="1710"/>
+    <TC Value="0"/>
+    <TC Value="1710"/>
+   </TR>
+   <TR>
+    <TC Value="16"/>
+    <TC Value="96513"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="146120682"/>
+    <TC Value="140908980"/>
+    <TC Value="5211702"/>
+   </TR>
+   <TR>
+    <TC Value="17"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+   </TR>
+   <TR>
+    <TC Value="18"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+   </TR>
+   <TR>
+    <TC Value="19"/>
+    <TC Value="0"/>
+    <TC Value="6"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="1140"/>
+    <TC Value="0"/>
+    <TC Value="1140"/>
+   </TR>
+   <TR>
+    <TC Value="20"/>
+    <TC Value="64342"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="97413788"/>
+    <TC Value="93939320"/>
+    <TC Value="3474468"/>
+   </TR>
+   <TR>
+    <TC Value="21"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+   </TR>
+   <TR>
+    <TC Value="14"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+   </TR>
+   <TR>
+    <TC Value="22"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+   </TR>
+  </TABLE>
+ </MENU>
+ <MENU Name="Queue_Metrics">
+  <TABLE name="Queue_Metrics">
+   <TH name="Device_id" isShow="true"/>
+   <TH name="Port_id" isShow="true"/>
+   <TH name="Queued_packet" isShow="true"/>
+   <TH name="Dequeued_packet" isShow="true"/>
+   <TH name="Dropped_packet" isShow="true"/>
+  </TABLE>
+ </MENU>
+ <MENU Name="TCP_Metrics">
+  <TABLE name="TCP_Metrics">
+   <TH name="Source" isShow="true"/>
+   <TH name="Destination" isShow="true"/>
+   <TH name="Local Address" isShow="false"/>
+   <TH name="Remote Address" isShow="false"/>
+   <TH name="Syn Sent" isShow="false"/>
+   <TH name="Syn-Ack Sent" isShow="false"/>
+   <TH name="Segment Sent" isShow="true"/>
+   <TH name="Segment Received" isShow="true"/>
+   <TH name="Segment Retransmitted" isShow="false"/>
+   <TH name="Ack Sent" isShow="true"/>
+   <TH name="Ack Received" isShow="true"/>
+   <TH name="Duplicate segment received" isShow="false"/>
+   <TH name="Out of order segment received" isShow="false"/>
+   <TH name="Duplicate ack received" isShow="true"/>
+   <TH name="Times RTO expired" isShow="false"/>
+   <TR>
+    <TC Value="SMF_1"/>
+    <TC Value="ANY_DEVICE"/>
+    <TC Value="172.0.0.4:0"/>
+    <TC Value="0.0.0.0:0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+   </TR>
+   <TR>
+    <TC Value="AMF_2"/>
+    <TC Value="ANY_DEVICE"/>
+    <TC Value="172.0.0.6:0"/>
+    <TC Value="0.0.0.0:0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+   </TR>
+   <TR>
+    <TC Value="UPF_3"/>
+    <TC Value="ANY_DEVICE"/>
+    <TC Value="172.0.0.2:0"/>
+    <TC Value="0.0.0.0:0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+   </TR>
+   <TR>
+    <TC Value="ROUTER_7"/>
+    <TC Value="ANY_DEVICE"/>
+    <TC Value="192.168.0.1:0"/>
+    <TC Value="0.0.0.0:0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+   </TR>
+   <TR>
+    <TC Value="WIRED_NODE_8"/>
+    <TC Value="ANY_DEVICE"/>
+    <TC Value="192.169.0.2:0"/>
+    <TC Value="0.0.0.0:0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+   </TR>
+   <TR>
+    <TC Value="UE_13"/>
+    <TC Value="ANY_DEVICE"/>
+    <TC Value="172.1.0.17:0"/>
+    <TC Value="0.0.0.0:0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+   </TR>
+   <TR>
+    <TC Value="UE_14"/>
+    <TC Value="ANY_DEVICE"/>
+    <TC Value="172.1.0.16:0"/>
+    <TC Value="0.0.0.0:0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+   </TR>
+   <TR>
+    <TC Value="UE_15"/>
+    <TC Value="ANY_DEVICE"/>
+    <TC Value="172.1.0.15:0"/>
+    <TC Value="0.0.0.0:0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+   </TR>
+   <TR>
+    <TC Value="UE_16"/>
+    <TC Value="ANY_DEVICE"/>
+    <TC Value="172.1.0.18:0"/>
+    <TC Value="0.0.0.0:0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+   </TR>
+   <TR>
+    <TC Value="UE_17"/>
+    <TC Value="ANY_DEVICE"/>
+    <TC Value="172.1.0.19:0"/>
+    <TC Value="0.0.0.0:0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+   </TR>
+   <TR>
+    <TC Value="UE_18"/>
+    <TC Value="ANY_DEVICE"/>
+    <TC Value="172.1.0.20:0"/>
+    <TC Value="0.0.0.0:0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+   </TR>
+   <TR>
+    <TC Value="UE_19"/>
+    <TC Value="ANY_DEVICE"/>
+    <TC Value="172.1.0.21:0"/>
+    <TC Value="0.0.0.0:0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+   </TR>
+   <TR>
+    <TC Value="UE_20"/>
+    <TC Value="ANY_DEVICE"/>
+    <TC Value="172.1.0.22:0"/>
+    <TC Value="0.0.0.0:0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+   </TR>
+   <TR>
+    <TC Value="UE_21"/>
+    <TC Value="ANY_DEVICE"/>
+    <TC Value="172.1.0.23:0"/>
+    <TC Value="0.0.0.0:0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+   </TR>
+   <TR>
+    <TC Value="UE_22"/>
+    <TC Value="ANY_DEVICE"/>
+    <TC Value="172.1.0.24:0"/>
+    <TC Value="0.0.0.0:0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+   </TR>
+   <TR>
+    <TC Value="UE_23"/>
+    <TC Value="ANY_DEVICE"/>
+    <TC Value="172.1.0.25:0"/>
+    <TC Value="0.0.0.0:0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+   </TR>
+  </TABLE>
+ </MENU>
+ <MENU Name="IP_Metrics">
+  <TABLE name="IP_Metrics">
+   <TH name="Device Id" isShow="true"/>
+   <TH name="Packet sent" isShow="true"/>
+   <TH name="Packet forwarded" isShow="true"/>
+   <TH name="Packet received" isShow="true"/>
+   <TH name="Packet discarded" isShow="false"/>
+   <TH name="TTL expired" isShow="false"/>
+   <TH name="Firewall blocked" isShow="false"/>
+   <TR>
+    <TC Value="1"/>
+    <TC Value="22"/>
+    <TC Value="0"/>
+    <TC Value="22"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+   </TR>
+   <TR>
+    <TC Value="2"/>
+    <TC Value="22"/>
+    <TC Value="0"/>
+    <TC Value="33"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+   </TR>
+   <TR>
+    <TC Value="3"/>
+    <TC Value="353892"/>
+    <TC Value="353881"/>
+    <TC Value="11"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+   </TR>
+   <TR>
+    <TC Value="7"/>
+    <TC Value="353881"/>
+    <TC Value="353881"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+   </TR>
+   <TR>
+    <TC Value="8"/>
+    <TC Value="353881"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+   </TR>
+   <TR>
+    <TC Value="9"/>
+    <TC Value="6"/>
+    <TC Value="0"/>
+    <TC Value="3"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+   </TR>
+   <TR>
+    <TC Value="10"/>
+    <TC Value="6"/>
+    <TC Value="0"/>
+    <TC Value="3"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+   </TR>
+   <TR>
+    <TC Value="11"/>
+    <TC Value="6"/>
+    <TC Value="0"/>
+    <TC Value="3"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+   </TR>
+   <TR>
+    <TC Value="12"/>
+    <TC Value="4"/>
+    <TC Value="0"/>
+    <TC Value="2"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+   </TR>
+   <TR>
+    <TC Value="13"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="20970"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+   </TR>
+   <TR>
+    <TC Value="14"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="21585"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+   </TR>
+   <TR>
+    <TC Value="15"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="2232"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+   </TR>
+   <TR>
+    <TC Value="16"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="2551"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+   </TR>
+   <TR>
+    <TC Value="17"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="1393"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+   </TR>
+   <TR>
+    <TC Value="18"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="2501"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+   </TR>
+   <TR>
+    <TC Value="19"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="1274"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+   </TR>
+   <TR>
+    <TC Value="20"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="1251"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+   </TR>
+   <TR>
+    <TC Value="21"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="30896"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+   </TR>
+   <TR>
+    <TC Value="22"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="24240"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+   </TR>
+   <TR>
+    <TC Value="23"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="19944"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+    <TC Value="0"/>
+   </TR>
+  </TABLE>
+ </MENU>
+ <MENU Name="IP_Forwarding_Table">
+  <MENU Name="SMF_1">
+   <TABLE name="SMF_1">
+    <TH name="Network Destination" isShow="true"/>
+    <TH name="Netmask/Prefix len" isShow="true"/>
+    <TH name="Gateway" isShow="true"/>
+    <TH name="Interface" isShow="true"/>
+    <TH name="Metrics" isShow="false"/>
+    <TH name="Type" isShow="false"/>
+    <TR>
+     <TC Value="172.0.0.6"/>
+     <TC Value="255.255.255.255"/>
+     <TC Value="172.0.0.6"/>
+     <TC Value="172.0.0.4 "/>
+     <TC Value="1"/>
+     <TC Value="LTE_NR"/>
+    </TR>
+    <TR>
+     <TC Value="172.0.0.2"/>
+     <TC Value="255.255.255.255"/>
+     <TC Value="172.0.0.2"/>
+     <TC Value="172.0.0.5 "/>
+     <TC Value="1"/>
+     <TC Value="LTE_NR"/>
+    </TR>
+    <TR>
+     <TC Value="172.0.0.0"/>
+     <TC Value="255.0.0.0"/>
+     <TC Value="on-link"/>
+     <TC Value="172.0.0.5 "/>
+     <TC Value="300"/>
+     <TC Value="LOCAL"/>
+    </TR>
+    <TR>
+     <TC Value="172.0.0.0"/>
+     <TC Value="255.0.0.0"/>
+     <TC Value="on-link"/>
+     <TC Value="172.0.0.4 "/>
+     <TC Value="300"/>
+     <TC Value="LOCAL"/>
+    </TR>
+    <TR>
+     <TC Value="224.0.0.1"/>
+     <TC Value="255.255.255.255"/>
+     <TC Value="on-link"/>
+     <TC Value="172.0.0.4 172.0.0.5 "/>
+     <TC Value="306"/>
+     <TC Value="MULTICAST"/>
+    </TR>
+    <TR>
+     <TC Value="224.0.0.0"/>
+     <TC Value="240.0.0.0"/>
+     <TC Value="on-link"/>
+     <TC Value="172.0.0.4 172.0.0.5 "/>
+     <TC Value="306"/>
+     <TC Value="MULTICAST"/>
+    </TR>
+    <TR>
+     <TC Value="255.255.255.255"/>
+     <TC Value="255.255.255.255"/>
+     <TC Value="on-link"/>
+     <TC Value="172.0.0.5 "/>
+     <TC Value="999"/>
+     <TC Value="BROADCAST"/>
+    </TR>
+    <TR>
+     <TC Value="255.255.255.255"/>
+     <TC Value="255.255.255.255"/>
+     <TC Value="on-link"/>
+     <TC Value="172.0.0.4 "/>
+     <TC Value="999"/>
+     <TC Value="BROADCAST"/>
+    </TR>
+   </TABLE>
+  </MENU>
+  <MENU Name="AMF_2">
+   <TABLE name="AMF_2">
+    <TH name="Network Destination" isShow="true"/>
+    <TH name="Netmask/Prefix len" isShow="true"/>
+    <TH name="Gateway" isShow="true"/>
+    <TH name="Interface" isShow="true"/>
+    <TH name="Metrics" isShow="false"/>
+    <TH name="Type" isShow="false"/>
+    <TR>
+     <TC Value="172.0.0.4"/>
+     <TC Value="255.255.255.255"/>
+     <TC Value="172.0.0.4"/>
+     <TC Value="172.0.0.6 "/>
+     <TC Value="1"/>
+     <TC Value="LTE_NR"/>
+    </TR>
+    <TR>
+     <TC Value="172.1.0.3"/>
+     <TC Value="255.255.255.255"/>
+     <TC Value="172.1.0.3"/>
+     <TC Value="172.0.0.7 "/>
+     <TC Value="1"/>
+     <TC Value="LTE_NR"/>
+    </TR>
+    <TR>
+     <TC Value="172.0.0.0"/>
+     <TC Value="255.0.0.0"/>
+     <TC Value="on-link"/>
+     <TC Value="172.0.0.7 "/>
+     <TC Value="300"/>
+     <TC Value="LOCAL"/>
+    </TR>
+    <TR>
+     <TC Value="172.0.0.0"/>
+     <TC Value="255.0.0.0"/>
+     <TC Value="on-link"/>
+     <TC Value="172.0.0.6 "/>
+     <TC Value="300"/>
+     <TC Value="LOCAL"/>
+    </TR>
+    <TR>
+     <TC Value="224.0.0.1"/>
+     <TC Value="255.255.255.255"/>
+     <TC Value="on-link"/>
+     <TC Value="172.0.0.6 172.0.0.7 "/>
+     <TC Value="306"/>
+     <TC Value="MULTICAST"/>
+    </TR>
+    <TR>
+     <TC Value="224.0.0.0"/>
+     <TC Value="240.0.0.0"/>
+     <TC Value="on-link"/>
+     <TC Value="172.0.0.6 172.0.0.7 "/>
+     <TC Value="306"/>
+     <TC Value="MULTICAST"/>
+    </TR>
+    <TR>
+     <TC Value="255.255.255.255"/>
+     <TC Value="255.255.255.255"/>
+     <TC Value="on-link"/>
+     <TC Value="172.0.0.7 "/>
+     <TC Value="999"/>
+     <TC Value="BROADCAST"/>
+    </TR>
+    <TR>
+     <TC Value="255.255.255.255"/>
+     <TC Value="255.255.255.255"/>
+     <TC Value="on-link"/>
+     <TC Value="172.0.0.6 "/>
+     <TC Value="999"/>
+     <TC Value="BROADCAST"/>
+    </TR>
+   </TABLE>
+  </MENU>
+  <MENU Name="UPF_3">
+   <TABLE name="UPF_3">
+    <TH name="Network Destination" isShow="true"/>
+    <TH name="Netmask/Prefix len" isShow="true"/>
+    <TH name="Gateway" isShow="true"/>
+    <TH name="Interface" isShow="true"/>
+    <TH name="Metrics" isShow="false"/>
+    <TH name="Type" isShow="false"/>
+    <TR>
+     <TC Value="172.1.0.4"/>
+     <TC Value="255.255.255.255"/>
+     <TC Value="172.1.0.4"/>
+     <TC Value="172.1.0.2 "/>
+     <TC Value="1"/>
+     <TC Value="LTE_NR"/>
+    </TR>
+    <TR>
+     <TC Value="172.0.0.5"/>
+     <TC Value="255.255.255.255"/>
+     <TC Value="172.0.0.5"/>
+     <TC Value="172.0.0.2 "/>
+     <TC Value="1"/>
+     <TC Value="LTE_NR"/>
+    </TR>
+    <TR>
+     <TC Value="172.1.0.19"/>
+     <TC Value="255.255.255.255"/>
+     <TC Value="172.1.0.4"/>
+     <TC Value="172.1.0.2 "/>
+     <TC Value="1"/>
+     <TC Value="LTE_NR"/>
+    </TR>
+    <TR>
+     <TC Value="172.1.0.15"/>
+     <TC Value="255.255.255.255"/>
+     <TC Value="172.1.0.7"/>
+     <TC Value="172.1.0.2 "/>
+     <TC Value="1"/>
+     <TC Value="LTE_NR"/>
+    </TR>
+    <TR>
+     <TC Value="172.1.0.23"/>
+     <TC Value="255.255.255.255"/>
+     <TC Value="172.1.0.10"/>
+     <TC Value="172.1.0.2 "/>
+     <TC Value="1"/>
+     <TC Value="LTE_NR"/>
+    </TR>
+    <TR>
+     <TC Value="172.1.0.17"/>
+     <TC Value="255.255.255.255"/>
+     <TC Value="172.1.0.13"/>
+     <TC Value="172.1.0.2 "/>
+     <TC Value="1"/>
+     <TC Value="LTE_NR"/>
+    </TR>
+    <TR>
+     <TC Value="172.1.0.21"/>
+     <TC Value="255.255.255.255"/>
+     <TC Value="172.1.0.4"/>
+     <TC Value="172.1.0.2 "/>
+     <TC Value="1"/>
+     <TC Value="LTE_NR"/>
+    </TR>
+    <TR>
+     <TC Value="172.1.0.18"/>
+     <TC Value="255.255.255.255"/>
+     <TC Value="172.1.0.7"/>
+     <TC Value="172.1.0.2 "/>
+     <TC Value="1"/>
+     <TC Value="LTE_NR"/>
+    </TR>
+    <TR>
+     <TC Value="172.1.0.24"/>
+     <TC Value="255.255.255.255"/>
+     <TC Value="172.1.0.10"/>
+     <TC Value="172.1.0.2 "/>
+     <TC Value="1"/>
+     <TC Value="LTE_NR"/>
+    </TR>
+    <TR>
+     <TC Value="172.1.0.16"/>
+     <TC Value="255.255.255.255"/>
+     <TC Value="172.1.0.13"/>
+     <TC Value="172.1.0.2 "/>
+     <TC Value="1"/>
+     <TC Value="LTE_NR"/>
+    </TR>
+    <TR>
+     <TC Value="172.1.0.22"/>
+     <TC Value="255.255.255.255"/>
+     <TC Value="172.1.0.4"/>
+     <TC Value="172.1.0.2 "/>
+     <TC Value="1"/>
+     <TC Value="LTE_NR"/>
+    </TR>
+    <TR>
+     <TC Value="172.1.0.20"/>
+     <TC Value="255.255.255.255"/>
+     <TC Value="172.1.0.7"/>
+     <TC Value="172.1.0.2 "/>
+     <TC Value="1"/>
+     <TC Value="LTE_NR"/>
+    </TR>
+    <TR>
+     <TC Value="172.1.0.25"/>
+     <TC Value="255.255.255.255"/>
+     <TC Value="172.1.0.10"/>
+     <TC Value="172.1.0.2 "/>
+     <TC Value="1"/>
+     <TC Value="LTE_NR"/>
+    </TR>
+    <TR>
+     <TC Value="192.168.0.0"/>
+     <TC Value="255.255.0.0"/>
+     <TC Value="on-link"/>
+     <TC Value="192.168.0.2 "/>
+     <TC Value="300"/>
+     <TC Value="LOCAL"/>
+    </TR>
+    <TR>
+     <TC Value="172.0.0.0"/>
+     <TC Value="255.0.0.0"/>
+     <TC Value="on-link"/>
+     <TC Value="172.1.0.2 "/>
+     <TC Value="300"/>
+     <TC Value="LOCAL"/>
+    </TR>
+    <TR>
+     <TC Value="172.0.0.0"/>
+     <TC Value="255.0.0.0"/>
+     <TC Value="on-link"/>
+     <TC Value="172.0.0.2 "/>
+     <TC Value="300"/>
+     <TC Value="LOCAL"/>
+    </TR>
+    <TR>
+     <TC Value="224.0.0.1"/>
+     <TC Value="255.255.255.255"/>
+     <TC Value="on-link"/>
+     <TC Value="172.0.0.2 172.1.0.2 192.168.0.2 "/>
+     <TC Value="306"/>
+     <TC Value="MULTICAST"/>
+    </TR>
+    <TR>
+     <TC Value="224.0.0.0"/>
+     <TC Value="240.0.0.0"/>
+     <TC Value="on-link"/>
+     <TC Value="172.0.0.2 172.1.0.2 192.168.0.2 "/>
+     <TC Value="306"/>
+     <TC Value="MULTICAST"/>
+    </TR>
+    <TR>
+     <TC Value="255.255.255.255"/>
+     <TC Value="255.255.255.255"/>
+     <TC Value="on-link"/>
+     <TC Value="192.168.0.2 "/>
+     <TC Value="999"/>
+     <TC Value="BROADCAST"/>
+    </TR>
+    <TR>
+     <TC Value="255.255.255.255"/>
+     <TC Value="255.255.255.255"/>
+     <TC Value="on-link"/>
+     <TC Value="172.1.0.2 "/>
+     <TC Value="999"/>
+     <TC Value="BROADCAST"/>
+    </TR>
+    <TR>
+     <TC Value="255.255.255.255"/>
+     <TC Value="255.255.255.255"/>
+     <TC Value="on-link"/>
+     <TC Value="172.0.0.2 "/>
+     <TC Value="999"/>
+     <TC Value="BROADCAST"/>
+    </TR>
+    <TR>
+     <TC Value="0.0.0.0"/>
+     <TC Value="0.0.0.0"/>
+     <TC Value="192.168.0.1"/>
+     <TC Value="192.168.0.2 "/>
+     <TC Value="999"/>
+     <TC Value="DEFAULT"/>
+    </TR>
+   </TABLE>
+  </MENU>
+  <MENU Name="ROUTER_7">
+   <TABLE name="ROUTER_7">
+    <TH name="Network Destination" isShow="true"/>
+    <TH name="Netmask/Prefix len" isShow="true"/>
+    <TH name="Gateway" isShow="true"/>
+    <TH name="Interface" isShow="true"/>
+    <TH name="Metrics" isShow="false"/>
+    <TH name="Type" isShow="false"/>
+    <TR>
+     <TC Value="172.0.0.0"/>
+     <TC Value="255.0.0.0"/>
+     <TC Value="192.168.0.2"/>
+     <TC Value="192.168.0.1 "/>
+     <TC Value="1"/>
+     <TC Value="LTE_NR"/>
+    </TR>
+    <TR>
+     <TC Value="192.169.0.0"/>
+     <TC Value="255.255.0.0"/>
+     <TC Value="on-link"/>
+     <TC Value="192.169.0.1 "/>
+     <TC Value="300"/>
+     <TC Value="LOCAL"/>
+    </TR>
+    <TR>
+     <TC Value="192.168.0.0"/>
+     <TC Value="255.255.0.0"/>
+     <TC Value="on-link"/>
+     <TC Value="192.168.0.1 "/>
+     <TC Value="300"/>
+     <TC Value="LOCAL"/>
+    </TR>
+    <TR>
+     <TC Value="224.0.0.1"/>
+     <TC Value="255.255.255.255"/>
+     <TC Value="on-link"/>
+     <TC Value="192.168.0.1 192.169.0.1 "/>
+     <TC Value="306"/>
+     <TC Value="MULTICAST"/>
+    </TR>
+    <TR>
+     <TC Value="224.0.0.0"/>
+     <TC Value="240.0.0.0"/>
+     <TC Value="on-link"/>
+     <TC Value="192.168.0.1 192.169.0.1 "/>
+     <TC Value="306"/>
+     <TC Value="MULTICAST"/>
+    </TR>
+    <TR>
+     <TC Value="255.255.255.255"/>
+     <TC Value="255.255.255.255"/>
+     <TC Value="on-link"/>
+     <TC Value="192.169.0.1 "/>
+     <TC Value="999"/>
+     <TC Value="BROADCAST"/>
+    </TR>
+    <TR>
+     <TC Value="255.255.255.255"/>
+     <TC Value="255.255.255.255"/>
+     <TC Value="on-link"/>
+     <TC Value="192.168.0.1 "/>
+     <TC Value="999"/>
+     <TC Value="BROADCAST"/>
+    </TR>
+   </TABLE>
+  </MENU>
+  <MENU Name="WIRED_NODE_8">
+   <TABLE name="WIRED_NODE_8">
+    <TH name="Network Destination" isShow="true"/>
+    <TH name="Netmask/Prefix len" isShow="true"/>
+    <TH name="Gateway" isShow="true"/>
+    <TH name="Interface" isShow="true"/>
+    <TH name="Metrics" isShow="false"/>
+    <TH name="Type" isShow="false"/>
+    <TR>
+     <TC Value="192.169.0.0"/>
+     <TC Value="255.255.0.0"/>
+     <TC Value="on-link"/>
+     <TC Value="192.169.0.2 "/>
+     <TC Value="300"/>
+     <TC Value="LOCAL"/>
+    </TR>
+    <TR>
+     <TC Value="224.0.0.1"/>
+     <TC Value="255.255.255.255"/>
+     <TC Value="on-link"/>
+     <TC Value="192.169.0.2 "/>
+     <TC Value="306"/>
+     <TC Value="MULTICAST"/>
+    </TR>
+    <TR>
+     <TC Value="224.0.0.0"/>
+     <TC Value="240.0.0.0"/>
+     <TC Value="on-link"/>
+     <TC Value="192.169.0.2 "/>
+     <TC Value="306"/>
+     <TC Value="MULTICAST"/>
+    </TR>
+    <TR>
+     <TC Value="255.255.255.255"/>
+     <TC Value="255.255.255.255"/>
+     <TC Value="on-link"/>
+     <TC Value="192.169.0.2 "/>
+     <TC Value="999"/>
+     <TC Value="BROADCAST"/>
+    </TR>
+    <TR>
+     <TC Value="0.0.0.0"/>
+     <TC Value="0.0.0.0"/>
+     <TC Value="192.169.0.1"/>
+     <TC Value="192.169.0.2 "/>
+     <TC Value="999"/>
+     <TC Value="DEFAULT"/>
+    </TR>
+   </TABLE>
+  </MENU>
+  <MENU Name="MACRO CELL GNB OMNI ANT_9">
+   <TABLE name="MACRO CELL GNB OMNI ANT_9">
+    <TH name="Network Destination" isShow="true"/>
+    <TH name="Netmask/Prefix len" isShow="true"/>
+    <TH name="Gateway" isShow="true"/>
+    <TH name="Interface" isShow="true"/>
+    <TH name="Metrics" isShow="false"/>
+    <TH name="Type" isShow="false"/>
+    <TR>
+     <TC Value="172.1.0.2"/>
+     <TC Value="255.255.255.255"/>
+     <TC Value="172.1.0.2"/>
+     <TC Value="172.1.0.4 "/>
+     <TC Value="1"/>
+     <TC Value="LTE_NR"/>
+    </TR>
+    <TR>
+     <TC Value="172.0.0.7"/>
+     <TC Value="255.255.255.255"/>
+     <TC Value="172.0.0.7"/>
+     <TC Value="172.1.0.3 "/>
+     <TC Value="1"/>
+     <TC Value="LTE_NR"/>
+    </TR>
+    <TR>
+     <TC Value="172.0.0.0"/>
+     <TC Value="255.0.0.0"/>
+     <TC Value="on-link"/>
+     <TC Value="172.1.0.5 "/>
+     <TC Value="300"/>
+     <TC Value="LOCAL"/>
+    </TR>
+    <TR>
+     <TC Value="172.0.0.0"/>
+     <TC Value="255.0.0.0"/>
+     <TC Value="on-link"/>
+     <TC Value="172.1.0.4 "/>
+     <TC Value="300"/>
+     <TC Value="LOCAL"/>
+    </TR>
+    <TR>
+     <TC Value="172.0.0.0"/>
+     <TC Value="255.0.0.0"/>
+     <TC Value="on-link"/>
+     <TC Value="172.1.0.3 "/>
+     <TC Value="300"/>
+     <TC Value="LOCAL"/>
+    </TR>
+    <TR>
+     <TC Value="224.0.0.1"/>
+     <TC Value="255.255.255.255"/>
+     <TC Value="on-link"/>
+     <TC Value="172.1.0.3 172.1.0.4 172.1.0.5 "/>
+     <TC Value="306"/>
+     <TC Value="MULTICAST"/>
+    </TR>
+    <TR>
+     <TC Value="224.0.0.0"/>
+     <TC Value="240.0.0.0"/>
+     <TC Value="on-link"/>
+     <TC Value="172.1.0.3 172.1.0.4 172.1.0.5 "/>
+     <TC Value="306"/>
+     <TC Value="MULTICAST"/>
+    </TR>
+    <TR>
+     <TC Value="255.255.255.255"/>
+     <TC Value="255.255.255.255"/>
+     <TC Value="on-link"/>
+     <TC Value="172.1.0.5 "/>
+     <TC Value="999"/>
+     <TC Value="BROADCAST"/>
+    </TR>
+    <TR>
+     <TC Value="255.255.255.255"/>
+     <TC Value="255.255.255.255"/>
+     <TC Value="on-link"/>
+     <TC Value="172.1.0.4 "/>
+     <TC Value="999"/>
+     <TC Value="BROADCAST"/>
+    </TR>
+    <TR>
+     <TC Value="255.255.255.255"/>
+     <TC Value="255.255.255.255"/>
+     <TC Value="on-link"/>
+     <TC Value="172.1.0.3 "/>
+     <TC Value="999"/>
+     <TC Value="BROADCAST"/>
+    </TR>
+    <TR>
+     <TC Value="0.0.0.0"/>
+     <TC Value="0.0.0.0"/>
+     <TC Value="172.1.0.2"/>
+     <TC Value="172.1.0.3 "/>
+     <TC Value="999"/>
+     <TC Value="DEFAULT"/>
+    </TR>
+    <TR>
+     <TC Value="0.0.0.0"/>
+     <TC Value="0.0.0.0"/>
+     <TC Value="172.1.0.2"/>
+     <TC Value="172.1.0.4 "/>
+     <TC Value="999"/>
+     <TC Value="DEFAULT"/>
+    </TR>
+    <TR>
+     <TC Value="0.0.0.0"/>
+     <TC Value="0.0.0.0"/>
+     <TC Value="172.1.0.2"/>
+     <TC Value="172.1.0.5 "/>
+     <TC Value="999"/>
+     <TC Value="DEFAULT"/>
+    </TR>
+   </TABLE>
+  </MENU>
+  <MENU Name="MACRO CELL GNB OMNI ANT_10">
+   <TABLE name="MACRO CELL GNB OMNI ANT_10">
+    <TH name="Network Destination" isShow="true"/>
+    <TH name="Netmask/Prefix len" isShow="true"/>
+    <TH name="Gateway" isShow="true"/>
+    <TH name="Interface" isShow="true"/>
+    <TH name="Metrics" isShow="false"/>
+    <TH name="Type" isShow="false"/>
+    <TR>
+     <TC Value="172.1.0.2"/>
+     <TC Value="255.255.255.255"/>
+     <TC Value="172.1.0.2"/>
+     <TC Value="172.1.0.7 "/>
+     <TC Value="1"/>
+     <TC Value="LTE_NR"/>
+    </TR>
+    <TR>
+     <TC Value="172.0.0.7"/>
+     <TC Value="255.255.255.255"/>
+     <TC Value="172.0.0.7"/>
+     <TC Value="172.1.0.6 "/>
+     <TC Value="1"/>
+     <TC Value="LTE_NR"/>
+    </TR>
+    <TR>
+     <TC Value="172.0.0.0"/>
+     <TC Value="255.0.0.0"/>
+     <TC Value="on-link"/>
+     <TC Value="172.1.0.8 "/>
+     <TC Value="300"/>
+     <TC Value="LOCAL"/>
+    </TR>
+    <TR>
+     <TC Value="172.0.0.0"/>
+     <TC Value="255.0.0.0"/>
+     <TC Value="on-link"/>
+     <TC Value="172.1.0.7 "/>
+     <TC Value="300"/>
+     <TC Value="LOCAL"/>
+    </TR>
+    <TR>
+     <TC Value="172.0.0.0"/>
+     <TC Value="255.0.0.0"/>
+     <TC Value="on-link"/>
+     <TC Value="172.1.0.6 "/>
+     <TC Value="300"/>
+     <TC Value="LOCAL"/>
+    </TR>
+    <TR>
+     <TC Value="224.0.0.1"/>
+     <TC Value="255.255.255.255"/>
+     <TC Value="on-link"/>
+     <TC Value="172.1.0.6 172.1.0.7 172.1.0.8 "/>
+     <TC Value="306"/>
+     <TC Value="MULTICAST"/>
+    </TR>
+    <TR>
+     <TC Value="224.0.0.0"/>
+     <TC Value="240.0.0.0"/>
+     <TC Value="on-link"/>
+     <TC Value="172.1.0.6 172.1.0.7 172.1.0.8 "/>
+     <TC Value="306"/>
+     <TC Value="MULTICAST"/>
+    </TR>
+    <TR>
+     <TC Value="255.255.255.255"/>
+     <TC Value="255.255.255.255"/>
+     <TC Value="on-link"/>
+     <TC Value="172.1.0.8 "/>
+     <TC Value="999"/>
+     <TC Value="BROADCAST"/>
+    </TR>
+    <TR>
+     <TC Value="255.255.255.255"/>
+     <TC Value="255.255.255.255"/>
+     <TC Value="on-link"/>
+     <TC Value="172.1.0.7 "/>
+     <TC Value="999"/>
+     <TC Value="BROADCAST"/>
+    </TR>
+    <TR>
+     <TC Value="255.255.255.255"/>
+     <TC Value="255.255.255.255"/>
+     <TC Value="on-link"/>
+     <TC Value="172.1.0.6 "/>
+     <TC Value="999"/>
+     <TC Value="BROADCAST"/>
+    </TR>
+    <TR>
+     <TC Value="0.0.0.0"/>
+     <TC Value="0.0.0.0"/>
+     <TC Value="172.1.0.2"/>
+     <TC Value="172.1.0.6 "/>
+     <TC Value="999"/>
+     <TC Value="DEFAULT"/>
+    </TR>
+    <TR>
+     <TC Value="0.0.0.0"/>
+     <TC Value="0.0.0.0"/>
+     <TC Value="172.1.0.2"/>
+     <TC Value="172.1.0.7 "/>
+     <TC Value="999"/>
+     <TC Value="DEFAULT"/>
+    </TR>
+    <TR>
+     <TC Value="0.0.0.0"/>
+     <TC Value="0.0.0.0"/>
+     <TC Value="172.1.0.2"/>
+     <TC Value="172.1.0.8 "/>
+     <TC Value="999"/>
+     <TC Value="DEFAULT"/>
+    </TR>
+   </TABLE>
+  </MENU>
+  <MENU Name="MACRO CELL GNB OMNI ANT_11">
+   <TABLE name="MACRO CELL GNB OMNI ANT_11">
+    <TH name="Network Destination" isShow="true"/>
+    <TH name="Netmask/Prefix len" isShow="true"/>
+    <TH name="Gateway" isShow="true"/>
+    <TH name="Interface" isShow="true"/>
+    <TH name="Metrics" isShow="false"/>
+    <TH name="Type" isShow="false"/>
+    <TR>
+     <TC Value="172.1.0.2"/>
+     <TC Value="255.255.255.255"/>
+     <TC Value="172.1.0.2"/>
+     <TC Value="172.1.0.10 "/>
+     <TC Value="1"/>
+     <TC Value="LTE_NR"/>
+    </TR>
+    <TR>
+     <TC Value="172.0.0.7"/>
+     <TC Value="255.255.255.255"/>
+     <TC Value="172.0.0.7"/>
+     <TC Value="172.1.0.9 "/>
+     <TC Value="1"/>
+     <TC Value="LTE_NR"/>
+    </TR>
+    <TR>
+     <TC Value="172.0.0.0"/>
+     <TC Value="255.0.0.0"/>
+     <TC Value="on-link"/>
+     <TC Value="172.1.0.11 "/>
+     <TC Value="300"/>
+     <TC Value="LOCAL"/>
+    </TR>
+    <TR>
+     <TC Value="172.0.0.0"/>
+     <TC Value="255.0.0.0"/>
+     <TC Value="on-link"/>
+     <TC Value="172.1.0.10 "/>
+     <TC Value="300"/>
+     <TC Value="LOCAL"/>
+    </TR>
+    <TR>
+     <TC Value="172.0.0.0"/>
+     <TC Value="255.0.0.0"/>
+     <TC Value="on-link"/>
+     <TC Value="172.1.0.9 "/>
+     <TC Value="300"/>
+     <TC Value="LOCAL"/>
+    </TR>
+    <TR>
+     <TC Value="224.0.0.1"/>
+     <TC Value="255.255.255.255"/>
+     <TC Value="on-link"/>
+     <TC Value="172.1.0.9 172.1.0.10 172.1.0.11 "/>
+     <TC Value="306"/>
+     <TC Value="MULTICAST"/>
+    </TR>
+    <TR>
+     <TC Value="224.0.0.0"/>
+     <TC Value="240.0.0.0"/>
+     <TC Value="on-link"/>
+     <TC Value="172.1.0.9 172.1.0.10 172.1.0.11 "/>
+     <TC Value="306"/>
+     <TC Value="MULTICAST"/>
+    </TR>
+    <TR>
+     <TC Value="255.255.255.255"/>
+     <TC Value="255.255.255.255"/>
+     <TC Value="on-link"/>
+     <TC Value="172.1.0.11 "/>
+     <TC Value="999"/>
+     <TC Value="BROADCAST"/>
+    </TR>
+    <TR>
+     <TC Value="255.255.255.255"/>
+     <TC Value="255.255.255.255"/>
+     <TC Value="on-link"/>
+     <TC Value="172.1.0.10 "/>
+     <TC Value="999"/>
+     <TC Value="BROADCAST"/>
+    </TR>
+    <TR>
+     <TC Value="255.255.255.255"/>
+     <TC Value="255.255.255.255"/>
+     <TC Value="on-link"/>
+     <TC Value="172.1.0.9 "/>
+     <TC Value="999"/>
+     <TC Value="BROADCAST"/>
+    </TR>
+    <TR>
+     <TC Value="0.0.0.0"/>
+     <TC Value="0.0.0.0"/>
+     <TC Value="172.1.0.2"/>
+     <TC Value="172.1.0.9 "/>
+     <TC Value="999"/>
+     <TC Value="DEFAULT"/>
+    </TR>
+    <TR>
+     <TC Value="0.0.0.0"/>
+     <TC Value="0.0.0.0"/>
+     <TC Value="172.1.0.2"/>
+     <TC Value="172.1.0.10 "/>
+     <TC Value="999"/>
+     <TC Value="DEFAULT"/>
+    </TR>
+    <TR>
+     <TC Value="0.0.0.0"/>
+     <TC Value="0.0.0.0"/>
+     <TC Value="172.1.0.2"/>
+     <TC Value="172.1.0.11 "/>
+     <TC Value="999"/>
+     <TC Value="DEFAULT"/>
+    </TR>
+   </TABLE>
+  </MENU>
+  <MENU Name="MACRO CELL GNB OMNI ANT_12">
+   <TABLE name="MACRO CELL GNB OMNI ANT_12">
+    <TH name="Network Destination" isShow="true"/>
+    <TH name="Netmask/Prefix len" isShow="true"/>
+    <TH name="Gateway" isShow="true"/>
+    <TH name="Interface" isShow="true"/>
+    <TH name="Metrics" isShow="false"/>
+    <TH name="Type" isShow="false"/>
+    <TR>
+     <TC Value="172.1.0.2"/>
+     <TC Value="255.255.255.255"/>
+     <TC Value="172.1.0.2"/>
+     <TC Value="172.1.0.13 "/>
+     <TC Value="1"/>
+     <TC Value="LTE_NR"/>
+    </TR>
+    <TR>
+     <TC Value="172.0.0.7"/>
+     <TC Value="255.255.255.255"/>
+     <TC Value="172.0.0.7"/>
+     <TC Value="172.1.0.12 "/>
+     <TC Value="1"/>
+     <TC Value="LTE_NR"/>
+    </TR>
+    <TR>
+     <TC Value="172.0.0.0"/>
+     <TC Value="255.0.0.0"/>
+     <TC Value="on-link"/>
+     <TC Value="172.1.0.14 "/>
+     <TC Value="300"/>
+     <TC Value="LOCAL"/>
+    </TR>
+    <TR>
+     <TC Value="172.0.0.0"/>
+     <TC Value="255.0.0.0"/>
+     <TC Value="on-link"/>
+     <TC Value="172.1.0.13 "/>
+     <TC Value="300"/>
+     <TC Value="LOCAL"/>
+    </TR>
+    <TR>
+     <TC Value="172.0.0.0"/>
+     <TC Value="255.0.0.0"/>
+     <TC Value="on-link"/>
+     <TC Value="172.1.0.12 "/>
+     <TC Value="300"/>
+     <TC Value="LOCAL"/>
+    </TR>
+    <TR>
+     <TC Value="224.0.0.1"/>
+     <TC Value="255.255.255.255"/>
+     <TC Value="on-link"/>
+     <TC Value="172.1.0.12 172.1.0.13 172.1.0.14 "/>
+     <TC Value="306"/>
+     <TC Value="MULTICAST"/>
+    </TR>
+    <TR>
+     <TC Value="224.0.0.0"/>
+     <TC Value="240.0.0.0"/>
+     <TC Value="on-link"/>
+     <TC Value="172.1.0.12 172.1.0.13 172.1.0.14 "/>
+     <TC Value="306"/>
+     <TC Value="MULTICAST"/>
+    </TR>
+    <TR>
+     <TC Value="255.255.255.255"/>
+     <TC Value="255.255.255.255"/>
+     <TC Value="on-link"/>
+     <TC Value="172.1.0.14 "/>
+     <TC Value="999"/>
+     <TC Value="BROADCAST"/>
+    </TR>
+    <TR>
+     <TC Value="255.255.255.255"/>
+     <TC Value="255.255.255.255"/>
+     <TC Value="on-link"/>
+     <TC Value="172.1.0.13 "/>
+     <TC Value="999"/>
+     <TC Value="BROADCAST"/>
+    </TR>
+    <TR>
+     <TC Value="255.255.255.255"/>
+     <TC Value="255.255.255.255"/>
+     <TC Value="on-link"/>
+     <TC Value="172.1.0.12 "/>
+     <TC Value="999"/>
+     <TC Value="BROADCAST"/>
+    </TR>
+    <TR>
+     <TC Value="0.0.0.0"/>
+     <TC Value="0.0.0.0"/>
+     <TC Value="172.1.0.2"/>
+     <TC Value="172.1.0.12 "/>
+     <TC Value="999"/>
+     <TC Value="DEFAULT"/>
+    </TR>
+    <TR>
+     <TC Value="0.0.0.0"/>
+     <TC Value="0.0.0.0"/>
+     <TC Value="172.1.0.2"/>
+     <TC Value="172.1.0.13 "/>
+     <TC Value="999"/>
+     <TC Value="DEFAULT"/>
+    </TR>
+    <TR>
+     <TC Value="0.0.0.0"/>
+     <TC Value="0.0.0.0"/>
+     <TC Value="172.1.0.2"/>
+     <TC Value="172.1.0.14 "/>
+     <TC Value="999"/>
+     <TC Value="DEFAULT"/>
+    </TR>
+   </TABLE>
+  </MENU>
+  <MENU Name="UE_13">
+   <TABLE name="UE_13">
+    <TH name="Network Destination" isShow="true"/>
+    <TH name="Netmask/Prefix len" isShow="true"/>
+    <TH name="Gateway" isShow="true"/>
+    <TH name="Interface" isShow="true"/>
+    <TH name="Metrics" isShow="false"/>
+    <TH name="Type" isShow="false"/>
+    <TR>
+     <TC Value="224.0.0.1"/>
+     <TC Value="255.255.255.255"/>
+     <TC Value="on-link"/>
+     <TC Value="172.1.0.17 "/>
+     <TC Value="306"/>
+     <TC Value="MULTICAST"/>
+    </TR>
+    <TR>
+     <TC Value="224.0.0.0"/>
+     <TC Value="240.0.0.0"/>
+     <TC Value="on-link"/>
+     <TC Value="172.1.0.17 "/>
+     <TC Value="306"/>
+     <TC Value="MULTICAST"/>
+    </TR>
+    <TR>
+     <TC Value="255.255.255.255"/>
+     <TC Value="255.255.255.255"/>
+     <TC Value="on-link"/>
+     <TC Value="172.1.0.17 "/>
+     <TC Value="999"/>
+     <TC Value="BROADCAST"/>
+    </TR>
+    <TR>
+     <TC Value="0.0.0.0"/>
+     <TC Value="0.0.0.0"/>
+     <TC Value="172.1.0.2"/>
+     <TC Value="172.1.0.17 "/>
+     <TC Value="999"/>
+     <TC Value="DEFAULT"/>
+    </TR>
+   </TABLE>
+  </MENU>
+  <MENU Name="UE_14">
+   <TABLE name="UE_14">
+    <TH name="Network Destination" isShow="true"/>
+    <TH name="Netmask/Prefix len" isShow="true"/>
+    <TH name="Gateway" isShow="true"/>
+    <TH name="Interface" isShow="true"/>
+    <TH name="Metrics" isShow="false"/>
+    <TH name="Type" isShow="false"/>
+    <TR>
+     <TC Value="224.0.0.1"/>
+     <TC Value="255.255.255.255"/>
+     <TC Value="on-link"/>
+     <TC Value="172.1.0.16 "/>
+     <TC Value="306"/>
+     <TC Value="MULTICAST"/>
+    </TR>
+    <TR>
+     <TC Value="224.0.0.0"/>
+     <TC Value="240.0.0.0"/>
+     <TC Value="on-link"/>
+     <TC Value="172.1.0.16 "/>
+     <TC Value="306"/>
+     <TC Value="MULTICAST"/>
+    </TR>
+    <TR>
+     <TC Value="255.255.255.255"/>
+     <TC Value="255.255.255.255"/>
+     <TC Value="on-link"/>
+     <TC Value="172.1.0.16 "/>
+     <TC Value="999"/>
+     <TC Value="BROADCAST"/>
+    </TR>
+    <TR>
+     <TC Value="0.0.0.0"/>
+     <TC Value="0.0.0.0"/>
+     <TC Value="172.1.0.2"/>
+     <TC Value="172.1.0.16 "/>
+     <TC Value="999"/>
+     <TC Value="DEFAULT"/>
+    </TR>
+   </TABLE>
+  </MENU>
+  <MENU Name="UE_15">
+   <TABLE name="UE_15">
+    <TH name="Network Destination" isShow="true"/>
+    <TH name="Netmask/Prefix len" isShow="true"/>
+    <TH name="Gateway" isShow="true"/>
+    <TH name="Interface" isShow="true"/>
+    <TH name="Metrics" isShow="false"/>
+    <TH name="Type" isShow="false"/>
+    <TR>
+     <TC Value="224.0.0.1"/>
+     <TC Value="255.255.255.255"/>
+     <TC Value="on-link"/>
+     <TC Value="172.1.0.15 "/>
+     <TC Value="306"/>
+     <TC Value="MULTICAST"/>
+    </TR>
+    <TR>
+     <TC Value="224.0.0.0"/>
+     <TC Value="240.0.0.0"/>
+     <TC Value="on-link"/>
+     <TC Value="172.1.0.15 "/>
+     <TC Value="306"/>
+     <TC Value="MULTICAST"/>
+    </TR>
+    <TR>
+     <TC Value="255.255.255.255"/>
+     <TC Value="255.255.255.255"/>
+     <TC Value="on-link"/>
+     <TC Value="172.1.0.15 "/>
+     <TC Value="999"/>
+     <TC Value="BROADCAST"/>
+    </TR>
+    <TR>
+     <TC Value="0.0.0.0"/>
+     <TC Value="0.0.0.0"/>
+     <TC Value="172.1.0.2"/>
+     <TC Value="172.1.0.15 "/>
+     <TC Value="999"/>
+     <TC Value="DEFAULT"/>
+    </TR>
+   </TABLE>
+  </MENU>
+  <MENU Name="UE_16">
+   <TABLE name="UE_16">
+    <TH name="Network Destination" isShow="true"/>
+    <TH name="Netmask/Prefix len" isShow="true"/>
+    <TH name="Gateway" isShow="true"/>
+    <TH name="Interface" isShow="true"/>
+    <TH name="Metrics" isShow="false"/>
+    <TH name="Type" isShow="false"/>
+    <TR>
+     <TC Value="224.0.0.1"/>
+     <TC Value="255.255.255.255"/>
+     <TC Value="on-link"/>
+     <TC Value="172.1.0.18 "/>
+     <TC Value="306"/>
+     <TC Value="MULTICAST"/>
+    </TR>
+    <TR>
+     <TC Value="224.0.0.0"/>
+     <TC Value="240.0.0.0"/>
+     <TC Value="on-link"/>
+     <TC Value="172.1.0.18 "/>
+     <TC Value="306"/>
+     <TC Value="MULTICAST"/>
+    </TR>
+    <TR>
+     <TC Value="255.255.255.255"/>
+     <TC Value="255.255.255.255"/>
+     <TC Value="on-link"/>
+     <TC Value="172.1.0.18 "/>
+     <TC Value="999"/>
+     <TC Value="BROADCAST"/>
+    </TR>
+    <TR>
+     <TC Value="0.0.0.0"/>
+     <TC Value="0.0.0.0"/>
+     <TC Value="172.1.0.2"/>
+     <TC Value="172.1.0.18 "/>
+     <TC Value="999"/>
+     <TC Value="DEFAULT"/>
+    </TR>
+   </TABLE>
+  </MENU>
+  <MENU Name="UE_17">
+   <TABLE name="UE_17">
+    <TH name="Network Destination" isShow="true"/>
+    <TH name="Netmask/Prefix len" isShow="true"/>
+    <TH name="Gateway" isShow="true"/>
+    <TH name="Interface" isShow="true"/>
+    <TH name="Metrics" isShow="false"/>
+    <TH name="Type" isShow="false"/>
+    <TR>
+     <TC Value="224.0.0.1"/>
+     <TC Value="255.255.255.255"/>
+     <TC Value="on-link"/>
+     <TC Value="172.1.0.19 "/>
+     <TC Value="306"/>
+     <TC Value="MULTICAST"/>
+    </TR>
+    <TR>
+     <TC Value="224.0.0.0"/>
+     <TC Value="240.0.0.0"/>
+     <TC Value="on-link"/>
+     <TC Value="172.1.0.19 "/>
+     <TC Value="306"/>
+     <TC Value="MULTICAST"/>
+    </TR>
+    <TR>
+     <TC Value="255.255.255.255"/>
+     <TC Value="255.255.255.255"/>
+     <TC Value="on-link"/>
+     <TC Value="172.1.0.19 "/>
+     <TC Value="999"/>
+     <TC Value="BROADCAST"/>
+    </TR>
+    <TR>
+     <TC Value="0.0.0.0"/>
+     <TC Value="0.0.0.0"/>
+     <TC Value="172.1.0.2"/>
+     <TC Value="172.1.0.19 "/>
+     <TC Value="999"/>
+     <TC Value="DEFAULT"/>
+    </TR>
+   </TABLE>
+  </MENU>
+  <MENU Name="UE_18">
+   <TABLE name="UE_18">
+    <TH name="Network Destination" isShow="true"/>
+    <TH name="Netmask/Prefix len" isShow="true"/>
+    <TH name="Gateway" isShow="true"/>
+    <TH name="Interface" isShow="true"/>
+    <TH name="Metrics" isShow="false"/>
+    <TH name="Type" isShow="false"/>
+    <TR>
+     <TC Value="224.0.0.1"/>
+     <TC Value="255.255.255.255"/>
+     <TC Value="on-link"/>
+     <TC Value="172.1.0.20 "/>
+     <TC Value="306"/>
+     <TC Value="MULTICAST"/>
+    </TR>
+    <TR>
+     <TC Value="224.0.0.0"/>
+     <TC Value="240.0.0.0"/>
+     <TC Value="on-link"/>
+     <TC Value="172.1.0.20 "/>
+     <TC Value="306"/>
+     <TC Value="MULTICAST"/>
+    </TR>
+    <TR>
+     <TC Value="255.255.255.255"/>
+     <TC Value="255.255.255.255"/>
+     <TC Value="on-link"/>
+     <TC Value="172.1.0.20 "/>
+     <TC Value="999"/>
+     <TC Value="BROADCAST"/>
+    </TR>
+    <TR>
+     <TC Value="0.0.0.0"/>
+     <TC Value="0.0.0.0"/>
+     <TC Value="172.1.0.2"/>
+     <TC Value="172.1.0.20 "/>
+     <TC Value="999"/>
+     <TC Value="DEFAULT"/>
+    </TR>
+   </TABLE>
+  </MENU>
+  <MENU Name="UE_19">
+   <TABLE name="UE_19">
+    <TH name="Network Destination" isShow="true"/>
+    <TH name="Netmask/Prefix len" isShow="true"/>
+    <TH name="Gateway" isShow="true"/>
+    <TH name="Interface" isShow="true"/>
+    <TH name="Metrics" isShow="false"/>
+    <TH name="Type" isShow="false"/>
+    <TR>
+     <TC Value="224.0.0.1"/>
+     <TC Value="255.255.255.255"/>
+     <TC Value="on-link"/>
+     <TC Value="172.1.0.21 "/>
+     <TC Value="306"/>
+     <TC Value="MULTICAST"/>
+    </TR>
+    <TR>
+     <TC Value="224.0.0.0"/>
+     <TC Value="240.0.0.0"/>
+     <TC Value="on-link"/>
+     <TC Value="172.1.0.21 "/>
+     <TC Value="306"/>
+     <TC Value="MULTICAST"/>
+    </TR>
+    <TR>
+     <TC Value="255.255.255.255"/>
+     <TC Value="255.255.255.255"/>
+     <TC Value="on-link"/>
+     <TC Value="172.1.0.21 "/>
+     <TC Value="999"/>
+     <TC Value="BROADCAST"/>
+    </TR>
+    <TR>
+     <TC Value="0.0.0.0"/>
+     <TC Value="0.0.0.0"/>
+     <TC Value="172.1.0.2"/>
+     <TC Value="172.1.0.21 "/>
+     <TC Value="999"/>
+     <TC Value="DEFAULT"/>
+    </TR>
+   </TABLE>
+  </MENU>
+  <MENU Name="UE_20">
+   <TABLE name="UE_20">
+    <TH name="Network Destination" isShow="true"/>
+    <TH name="Netmask/Prefix len" isShow="true"/>
+    <TH name="Gateway" isShow="true"/>
+    <TH name="Interface" isShow="true"/>
+    <TH name="Metrics" isShow="false"/>
+    <TH name="Type" isShow="false"/>
+    <TR>
+     <TC Value="224.0.0.1"/>
+     <TC Value="255.255.255.255"/>
+     <TC Value="on-link"/>
+     <TC Value="172.1.0.22 "/>
+     <TC Value="306"/>
+     <TC Value="MULTICAST"/>
+    </TR>
+    <TR>
+     <TC Value="224.0.0.0"/>
+     <TC Value="240.0.0.0"/>
+     <TC Value="on-link"/>
+     <TC Value="172.1.0.22 "/>
+     <TC Value="306"/>
+     <TC Value="MULTICAST"/>
+    </TR>
+    <TR>
+     <TC Value="255.255.255.255"/>
+     <TC Value="255.255.255.255"/>
+     <TC Value="on-link"/>
+     <TC Value="172.1.0.22 "/>
+     <TC Value="999"/>
+     <TC Value="BROADCAST"/>
+    </TR>
+    <TR>
+     <TC Value="0.0.0.0"/>
+     <TC Value="0.0.0.0"/>
+     <TC Value="172.1.0.2"/>
+     <TC Value="172.1.0.22 "/>
+     <TC Value="999"/>
+     <TC Value="DEFAULT"/>
+    </TR>
+   </TABLE>
+  </MENU>
+  <MENU Name="UE_21">
+   <TABLE name="UE_21">
+    <TH name="Network Destination" isShow="true"/>
+    <TH name="Netmask/Prefix len" isShow="true"/>
+    <TH name="Gateway" isShow="true"/>
+    <TH name="Interface" isShow="true"/>
+    <TH name="Metrics" isShow="false"/>
+    <TH name="Type" isShow="false"/>
+    <TR>
+     <TC Value="224.0.0.1"/>
+     <TC Value="255.255.255.255"/>
+     <TC Value="on-link"/>
+     <TC Value="172.1.0.23 "/>
+     <TC Value="306"/>
+     <TC Value="MULTICAST"/>
+    </TR>
+    <TR>
+     <TC Value="224.0.0.0"/>
+     <TC Value="240.0.0.0"/>
+     <TC Value="on-link"/>
+     <TC Value="172.1.0.23 "/>
+     <TC Value="306"/>
+     <TC Value="MULTICAST"/>
+    </TR>
+    <TR>
+     <TC Value="255.255.255.255"/>
+     <TC Value="255.255.255.255"/>
+     <TC Value="on-link"/>
+     <TC Value="172.1.0.23 "/>
+     <TC Value="999"/>
+     <TC Value="BROADCAST"/>
+    </TR>
+    <TR>
+     <TC Value="0.0.0.0"/>
+     <TC Value="0.0.0.0"/>
+     <TC Value="172.1.0.2"/>
+     <TC Value="172.1.0.23 "/>
+     <TC Value="999"/>
+     <TC Value="DEFAULT"/>
+    </TR>
+   </TABLE>
+  </MENU>
+  <MENU Name="UE_22">
+   <TABLE name="UE_22">
+    <TH name="Network Destination" isShow="true"/>
+    <TH name="Netmask/Prefix len" isShow="true"/>
+    <TH name="Gateway" isShow="true"/>
+    <TH name="Interface" isShow="true"/>
+    <TH name="Metrics" isShow="false"/>
+    <TH name="Type" isShow="false"/>
+    <TR>
+     <TC Value="224.0.0.1"/>
+     <TC Value="255.255.255.255"/>
+     <TC Value="on-link"/>
+     <TC Value="172.1.0.24 "/>
+     <TC Value="306"/>
+     <TC Value="MULTICAST"/>
+    </TR>
+    <TR>
+     <TC Value="224.0.0.0"/>
+     <TC Value="240.0.0.0"/>
+     <TC Value="on-link"/>
+     <TC Value="172.1.0.24 "/>
+     <TC Value="306"/>
+     <TC Value="MULTICAST"/>
+    </TR>
+    <TR>
+     <TC Value="255.255.255.255"/>
+     <TC Value="255.255.255.255"/>
+     <TC Value="on-link"/>
+     <TC Value="172.1.0.24 "/>
+     <TC Value="999"/>
+     <TC Value="BROADCAST"/>
+    </TR>
+    <TR>
+     <TC Value="0.0.0.0"/>
+     <TC Value="0.0.0.0"/>
+     <TC Value="172.1.0.2"/>
+     <TC Value="172.1.0.24 "/>
+     <TC Value="999"/>
+     <TC Value="DEFAULT"/>
+    </TR>
+   </TABLE>
+  </MENU>
+  <MENU Name="UE_23">
+   <TABLE name="UE_23">
+    <TH name="Network Destination" isShow="true"/>
+    <TH name="Netmask/Prefix len" isShow="true"/>
+    <TH name="Gateway" isShow="true"/>
+    <TH name="Interface" isShow="true"/>
+    <TH name="Metrics" isShow="false"/>
+    <TH name="Type" isShow="false"/>
+    <TR>
+     <TC Value="224.0.0.1"/>
+     <TC Value="255.255.255.255"/>
+     <TC Value="on-link"/>
+     <TC Value="172.1.0.25 "/>
+     <TC Value="306"/>
+     <TC Value="MULTICAST"/>
+    </TR>
+    <TR>
+     <TC Value="224.0.0.0"/>
+     <TC Value="240.0.0.0"/>
+     <TC Value="on-link"/>
+     <TC Value="172.1.0.25 "/>
+     <TC Value="306"/>
+     <TC Value="MULTICAST"/>
+    </TR>
+    <TR>
+     <TC Value="255.255.255.255"/>
+     <TC Value="255.255.255.255"/>
+     <TC Value="on-link"/>
+     <TC Value="172.1.0.25 "/>
+     <TC Value="999"/>
+     <TC Value="BROADCAST"/>
+    </TR>
+    <TR>
+     <TC Value="0.0.0.0"/>
+     <TC Value="0.0.0.0"/>
+     <TC Value="172.1.0.2"/>
+     <TC Value="172.1.0.25 "/>
+     <TC Value="999"/>
+     <TC Value="DEFAULT"/>
+    </TR>
+   </TABLE>
+  </MENU>
+ </MENU>
+ <MENU Name="UDP Metrics">
+  <TABLE name="UDP Metrics">
+   <TH name="Device id" isShow="true"/>
+   <TH name="Local address" isShow="true"/>
+   <TH name="Foreign address" isShow="true"/>
+   <TH name="Datagram sent" isShow="true"/>
+   <TH name="Datagram received" isShow="true"/>
+   <TR>
+    <TC Value="8"/>
+    <TC Value="192.169.0.2:82"/>
+    <TC Value="172.1.0.17:36934"/>
+    <TC Value="32171"/>
+    <TC Value="0"/>
+   </TR>
+   <TR>
+    <TC Value="8"/>
+    <TC Value="192.169.0.2:12668"/>
+    <TC Value="172.1.0.16:53000"/>
+    <TC Value="32171"/>
+    <TC Value="0"/>
+   </TR>
+   <TR>
+    <TC Value="8"/>
+    <TC Value="192.169.0.2:38338"/>
+    <TC Value="172.1.0.15:31448"/>
+    <TC Value="32171"/>
+    <TC Value="0"/>
+   </TR>
+   <TR>
+    <TC Value="8"/>
+    <TC Value="192.169.0.2:22956"/>
+    <TC Value="172.1.0.18:58716"/>
+    <TC Value="32171"/>
+    <TC Value="0"/>
+   </TR>
+   <TR>
+    <TC Value="8"/>
+    <TC Value="192.169.0.2:53924"/>
+    <TC Value="172.1.0.19:48928"/>
+    <TC Value="32171"/>
+    <TC Value="0"/>
+   </TR>
+   <TR>
+    <TC Value="8"/>
+    <TC Value="192.169.0.2:11410"/>
+    <TC Value="172.1.0.20:56290"/>
+    <TC Value="32171"/>
+    <TC Value="0"/>
+   </TR>
+   <TR>
+    <TC Value="8"/>
+    <TC Value="192.169.0.2:46562"/>
+    <TC Value="172.1.0.21:33654"/>
+    <TC Value="32171"/>
+    <TC Value="0"/>
+   </TR>
+   <TR>
+    <TC Value="8"/>
+    <TC Value="192.169.0.2:19922"/>
+    <TC Value="172.1.0.22:982"/>
+    <TC Value="32171"/>
+    <TC Value="0"/>
+   </TR>
+   <TR>
+    <TC Value="8"/>
+    <TC Value="192.169.0.2:5990"/>
+    <TC Value="172.1.0.23:23884"/>
+    <TC Value="32171"/>
+    <TC Value="0"/>
+   </TR>
+   <TR>
+    <TC Value="8"/>
+    <TC Value="192.169.0.2:9654"/>
+    <TC Value="172.1.0.24:10872"/>
+    <TC Value="32171"/>
+    <TC Value="0"/>
+   </TR>
+   <TR>
+    <TC Value="8"/>
+    <TC Value="192.169.0.2:64782"/>
+    <TC Value="172.1.0.25:29208"/>
+    <TC Value="32171"/>
+    <TC Value="0"/>
+   </TR>
+   <TR>
+    <TC Value="13"/>
+    <TC Value="172.1.0.17:36934"/>
+    <TC Value="192.169.0.2:82"/>
+    <TC Value="0"/>
+    <TC Value="20970"/>
+   </TR>
+   <TR>
+    <TC Value="14"/>
+    <TC Value="172.1.0.16:53000"/>
+    <TC Value="192.169.0.2:12668"/>
+    <TC Value="0"/>
+    <TC Value="21585"/>
+   </TR>
+   <TR>
+    <TC Value="15"/>
+    <TC Value="172.1.0.15:31448"/>
+    <TC Value="192.169.0.2:38338"/>
+    <TC Value="0"/>
+    <TC Value="2232"/>
+   </TR>
+   <TR>
+    <TC Value="16"/>
+    <TC Value="172.1.0.18:58716"/>
+    <TC Value="192.169.0.2:22956"/>
+    <TC Value="0"/>
+    <TC Value="2551"/>
+   </TR>
+   <TR>
+    <TC Value="17"/>
+    <TC Value="172.1.0.19:48928"/>
+    <TC Value="192.169.0.2:53924"/>
+    <TC Value="0"/>
+    <TC Value="1393"/>
+   </TR>
+   <TR>
+    <TC Value="18"/>
+    <TC Value="172.1.0.20:56290"/>
+    <TC Value="192.169.0.2:11410"/>
+    <TC Value="0"/>
+    <TC Value="2501"/>
+   </TR>
+   <TR>
+    <TC Value="19"/>
+    <TC Value="172.1.0.21:33654"/>
+    <TC Value="192.169.0.2:46562"/>
+    <TC Value="0"/>
+    <TC Value="1274"/>
+   </TR>
+   <TR>
+    <TC Value="20"/>
+    <TC Value="172.1.0.22:982"/>
+    <TC Value="192.169.0.2:19922"/>
+    <TC Value="0"/>
+    <TC Value="1251"/>
+   </TR>
+   <TR>
+    <TC Value="21"/>
+    <TC Value="172.1.0.23:23884"/>
+    <TC Value="192.169.0.2:5990"/>
+    <TC Value="0"/>
+    <TC Value="30896"/>
+   </TR>
+   <TR>
+    <TC Value="22"/>
+    <TC Value="172.1.0.24:10872"/>
+    <TC Value="192.169.0.2:9654"/>
+    <TC Value="0"/>
+    <TC Value="24240"/>
+   </TR>
+   <TR>
+    <TC Value="23"/>
+    <TC Value="172.1.0.25:29208"/>
+    <TC Value="192.169.0.2:64782"/>
+    <TC Value="0"/>
+    <TC Value="19944"/>
+   </TR>
+  </TABLE>
+ </MENU>
+ <MENU Name="Switch Mac address table">
+  <MENU Name="CORE_SWITCH_4">
+   <TABLE name="CORE_SWITCH_4_0">
+    <TH name="Mac Address" isShow="true"/>
+    <TH name="Type" isShow="true"/>
+    <TH name="OutPort" isShow="true"/>
+    <TR>
+     <TC Value="155D00002002"/>
+     <TC Value="Dynamic"/>
+     <TC Value="1"/>
+    </TR>
+    <TR>
+     <TC Value="155D00009001"/>
+     <TC Value="Dynamic"/>
+     <TC Value="2"/>
+    </TR>
+    <TR>
+     <TC Value="155D00010001"/>
+     <TC Value="Dynamic"/>
+     <TC Value="3"/>
+    </TR>
+    <TR>
+     <TC Value="155D00011001"/>
+     <TC Value="Dynamic"/>
+     <TC Value="4"/>
+    </TR>
+    <TR>
+     <TC Value="155D00012001"/>
+     <TC Value="Dynamic"/>
+     <TC Value="5"/>
+    </TR>
+   </TABLE>
+  </MENU>
+  <MENU Name="CORE_SWITCH_5">
+   <TABLE name="CORE_SWITCH_5_0">
+    <TH name="Mac Address" isShow="true"/>
+    <TH name="Type" isShow="true"/>
+    <TH name="OutPort" isShow="true"/>
+    <TR>
+     <TC Value="155D00003002"/>
+     <TC Value="Dynamic"/>
+     <TC Value="1"/>
+    </TR>
+    <TR>
+     <TC Value="155D00009002"/>
+     <TC Value="Dynamic"/>
+     <TC Value="2"/>
+    </TR>
+    <TR>
+     <TC Value="155D00010002"/>
+     <TC Value="Dynamic"/>
+     <TC Value="3"/>
+    </TR>
+    <TR>
+     <TC Value="155D00011002"/>
+     <TC Value="Dynamic"/>
+     <TC Value="4"/>
+    </TR>
+    <TR>
+     <TC Value="155D00012002"/>
+     <TC Value="Dynamic"/>
+     <TC Value="5"/>
+    </TR>
+   </TABLE>
+  </MENU>
+  <MENU Name="CORE_SWITCH_6">
+   <TABLE name="CORE_SWITCH_6_0">
+    <TH name="Mac Address" isShow="true"/>
+    <TH name="Type" isShow="true"/>
+    <TH name="OutPort" isShow="true"/>
+    <TR>
+     <TC Value="155D00009003"/>
+     <TC Value="Dynamic"/>
+     <TC Value="1"/>
+    </TR>
+    <TR>
+     <TC Value="155D00010003"/>
+     <TC Value="Dynamic"/>
+     <TC Value="2"/>
+    </TR>
+    <TR>
+     <TC Value="155D00011003"/>
+     <TC Value="Dynamic"/>
+     <TC Value="3"/>
+    </TR>
+    <TR>
+     <TC Value="155D00012003"/>
+     <TC Value="Dynamic"/>
+     <TC Value="4"/>
+    </TR>
+   </TABLE>
+  </MENU>
+ </MENU>
+ <MENU Name="Application_Metrics">
+  <TABLE name="Application_Metrics">
+   <TH name="Application ID" isShow="true"/>
+   <TH name="Application Name" isShow="true"/>
+   <TH name="Source ID" isShow="false"/>
+   <TH name="Destination ID" isShow="false"/>
+   <TH name="Packets Generated" isShow="true"/>
+   <TH name="Packets Received" isShow="true"/>
+   <TH name="Payload generated (bytes)" isShow="false"/>
+   <TH name="Payload received (bytes)" isShow="false"/>
+   <TH name="Throughput (Mbps)" isShow="true"/>
+   <TH name="Delay (microsecond)" isShow="true"/>
+   <TH name="Jitter (microsecond)" isShow="true"/>
+   <TR>
+    <TC Value="1"/>
+    <TC Value="App1_CBR"/>
+    <TC Value="8"/>
+    <TC Value="13"/>
+    <TC Value="32171"/>
+    <TC Value="20970"/>
+    <TC Value="46969660"/>
+    <TC Value="30616200"/>
+    <TC Value="16.296048"/>
+    <TC Value="3261357.578635"/>
+    <TC Value="943.177529"/>
+   </TR>
+   <TR>
+    <TC Value="2"/>
+    <TC Value="App2_CBR"/>
+    <TC Value="8"/>
+    <TC Value="14"/>
+    <TC Value="32171"/>
+    <TC Value="21585"/>
+    <TC Value="46969660"/>
+    <TC Value="31514100"/>
+    <TC Value="16.773972"/>
+    <TC Value="3103716.920527"/>
+    <TC Value="927.682802"/>
+   </TR>
+   <TR>
+    <TC Value="3"/>
+    <TC Value="App3_CBR"/>
+    <TC Value="8"/>
+    <TC Value="15"/>
+    <TC Value="32171"/>
+    <TC Value="2232"/>
+    <TC Value="46969660"/>
+    <TC Value="3258720"/>
+    <TC Value="1.734515"/>
+    <TC Value="6329113.273118"/>
+    <TC Value="6445.704348"/>
+   </TR>
+   <TR>
+    <TC Value="4"/>
+    <TC Value="App4_CBR"/>
+    <TC Value="8"/>
+    <TC Value="16"/>
+    <TC Value="32171"/>
+    <TC Value="2551"/>
+    <TC Value="46969660"/>
+    <TC Value="3724460"/>
+    <TC Value="1.982414"/>
+    <TC Value="5834348.487025"/>
+    <TC Value="5689.338353"/>
+   </TR>
+   <TR>
+    <TC Value="5"/>
+    <TC Value="App5_CBR"/>
+    <TC Value="8"/>
+    <TC Value="17"/>
+    <TC Value="32171"/>
+    <TC Value="1393"/>
+    <TC Value="46969660"/>
+    <TC Value="2033780"/>
+    <TC Value="1.082518"/>
+    <TC Value="7447165.956640"/>
+    <TC Value="10411.636782"/>
+   </TR>
+   <TR>
+    <TC Value="6"/>
+    <TC Value="App6_CBR"/>
+    <TC Value="8"/>
+    <TC Value="18"/>
+    <TC Value="32171"/>
+    <TC Value="2501"/>
+    <TC Value="46969660"/>
+    <TC Value="3651460"/>
+    <TC Value="1.943558"/>
+    <TC Value="5584684.888924"/>
+    <TC Value="5548.963840"/>
+   </TR>
+   <TR>
+    <TC Value="7"/>
+    <TC Value="App7_CBR"/>
+    <TC Value="8"/>
+    <TC Value="19"/>
+    <TC Value="32171"/>
+    <TC Value="1274"/>
+    <TC Value="46969660"/>
+    <TC Value="1860040"/>
+    <TC Value="0.990041"/>
+    <TC Value="7547272.298901"/>
+    <TC Value="11164.192930"/>
+   </TR>
+   <TR>
+    <TC Value="8"/>
+    <TC Value="App8_CBR"/>
+    <TC Value="8"/>
+    <TC Value="20"/>
+    <TC Value="32171"/>
+    <TC Value="1251"/>
+    <TC Value="46969660"/>
+    <TC Value="1826460"/>
+    <TC Value="0.972168"/>
+    <TC Value="6385251.792166"/>
+    <TC Value="11588.177920"/>
+   </TR>
+   <TR>
+    <TC Value="9"/>
+    <TC Value="App9_CBR"/>
+    <TC Value="8"/>
+    <TC Value="21"/>
+    <TC Value="32171"/>
+    <TC Value="30896"/>
+    <TC Value="46969660"/>
+    <TC Value="45108160"/>
+    <TC Value="24.009666"/>
+    <TC Value="423261.176541"/>
+    <TC Value="832.188458"/>
+   </TR>
+   <TR>
+    <TC Value="10"/>
+    <TC Value="App10_CBR"/>
+    <TC Value="8"/>
+    <TC Value="22"/>
+    <TC Value="32171"/>
+    <TC Value="24240"/>
+    <TC Value="46969660"/>
+    <TC Value="35390400"/>
+    <TC Value="18.837206"/>
+    <TC Value="2020291.179141"/>
+    <TC Value="934.762655"/>
+   </TR>
+   <TR>
+    <TC Value="11"/>
+    <TC Value="App11_CBR"/>
+    <TC Value="8"/>
+    <TC Value="23"/>
+    <TC Value="32171"/>
+    <TC Value="19944"/>
+    <TC Value="46969660"/>
+    <TC Value="29118240"/>
+    <TC Value="15.498731"/>
+    <TC Value="2880619.808342"/>
+    <TC Value="1037.021752"/>
+   </TR>
+  </TABLE>
+ </MENU>
+ <MENU Name="LTENR_Cell_Metrics">
+  <TABLE name="LTENR_Cell_Metrics">
+   <TH name="gNB/eNB Name" isShow="true"/>
+   <TH name="gNB/eNB Interface ID" isShow="true"/>
+   <TH name="PDSCH Bytes Transmitted (bytes)" isShow="false"/>
+   <TH name="PUSCH Bytes Transmitted (bytes)" isShow="false"/>
+   <TH name="PDSCH Throughput (Mbps)" isShow="true"/>
+   <TH name="PUSCH Throughput (Mbps)" isShow="true"/>
+   <TR>
+    <TC Value="MACRO CELL GNB OMNI ANT_9"/>
+    <TC Value="4"/>
+    <TC Value="5829984.000000"/>
+    <TC Value="0.000000"/>
+    <TC Value="3.066395"/>
+    <TC Value="0.000000"/>
+   </TR>
+   <TR>
+    <TC Value="MACRO CELL GNB OMNI ANT_10"/>
+    <TC Value="4"/>
+    <TC Value="10838592.000000"/>
+    <TC Value="0.000000"/>
+    <TC Value="5.700772"/>
+    <TC Value="0.000000"/>
+   </TR>
+   <TR>
+    <TC Value="MACRO CELL GNB OMNI ANT_11"/>
+    <TC Value="4"/>
+    <TC Value="111719040.000000"/>
+    <TC Value="0.000000"/>
+    <TC Value="58.760836"/>
+    <TC Value="0.000000"/>
+   </TR>
+   <TR>
+    <TC Value="MACRO CELL GNB OMNI ANT_12"/>
+    <TC Value="4"/>
+    <TC Value="63321840.000000"/>
+    <TC Value="0.000000"/>
+    <TC Value="33.305373"/>
+    <TC Value="0.000000"/>
+   </TR>
+  </TABLE>
+ </MENU>
+</NetSim_Metrics>

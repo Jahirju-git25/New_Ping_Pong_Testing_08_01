@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "G:\\SUMAN_NETSIM\\NetSim\\Workspaces\\one\\src\\Simulation\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{076D5FE6-9382-428A-A330-0DCED234B873}|LTE_NR\\LTE_NR.vcxproj|G:\\SUMAN_NETSIM\\NetSim\\Workspaces\\one\\src\\Simulation\\LTE_NR\\LTENR_GNBRRC.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{076D5FE6-9382-428A-A330-0DCED234B873}|LTE_NR\\LTE_NR.vcxproj|solutionrelative:LTE_NR\\LTENR_GNBRRC.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LTENR_GNBRRC.c",
+              "DocumentMoniker": "G:\\SUMAN_NETSIM\\NetSim\\Workspaces\\one\\src\\Simulation\\LTE_NR\\LTENR_GNBRRC.c",
+              "RelativeDocumentMoniker": "LTE_NR\\LTENR_GNBRRC.c",
+              "ToolTip": "G:\\SUMAN_NETSIM\\NetSim\\Workspaces\\one\\src\\Simulation\\LTE_NR\\LTENR_GNBRRC.c",
+              "RelativeToolTip": "LTE_NR\\LTENR_GNBRRC.c",
+              "ViewState": "AgIAAF8CAAAAAAAAAAAIwGkCAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2026-01-08T06:38:58.761Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

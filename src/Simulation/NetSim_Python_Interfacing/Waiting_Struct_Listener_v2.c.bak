@@ -1,0 +1,478 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <stdint.h>
+#include <stdlib.h>
+#include <string.h>
+#include <Ws2tcpip.h>
+#include <synchapi.h>
+#include <windows.h>
+#include <stdbool.h>
+#include <signal.h>
+#include <math.h>
+#pragma comment(lib,"ws2_32.lib")
+#pragma comment(lib,"Synchronization.lib")
+
+WSADATA wsa;
+SOCKET listenSocket;
+#define DEFAULT_BUFLEN 1024
+#define DEFAULT_PORT  "12346"
+
+int num_gNBs = 0;
+int num_UEs = 0;
+
+
+#define noise_power_dBm -93
+#define BW_MHz 100
+
+int step_count = 0;
+
+struct gNB_Powers {
+	double* gNBlist;
+};
+
+struct SINR_Values_Reward {
+	double* SINRlist;
+	double* throughputs_NETSIM;
+	double reward;
+};
+
+enum MessageType {
+	RECV_REQUEST = 0,
+	RECV_gNB_POWERS = 1
+};
+
+struct recv_Message {
+	int msgType;
+	struct {
+		struct gNB_Powers* powers;
+		int requstValue;
+	} data;
+};
+
+struct recv_Message* receivedMsg;
+
+unsigned char* serialize_int64_value(unsigned char* buffer, uint64_t value) {
+	buffer[0] = value >> 56;
+	buffer[1] = value >> 48;
+	buffer[2] = value >> 40;
+	buffer[3] = value >> 32;
+	buffer[4] = value >> 24;
+	buffer[5] = value >> 16;
+	buffer[6] = value >> 8;
+	buffer[7] = value;
+	return buffer + 8;
+}
+
+unsigned char* deserialize_int64_value(unsigned char* buffer, uint64_t* value) {
+	*value = ((uint64_t)buffer[0] << 56) |
+		((uint64_t)buffer[1] << 48) |
+		((uint64_t)buffer[2] << 40) |
+		((uint64_t)buffer[3] << 32) |
+		((uint64_t)buffer[4] << 24) |
+		((uint64_t)buffer[5] << 16) |
+		((uint64_t)buffer[6] << 8) |
+		(uint64_t)buffer[7];
+	return buffer + 8;
+}
+
+unsigned char* serialize_double_value(unsigned char* buffer, double value) {
+	// Assumes big-endian architecture
+	uint64_t temp;
+	memcpy(&temp, &value, sizeof(double));
+	return serialize_int64_value(buffer, temp);
+}
+
+unsigned char* deserialize_double_value(unsigned char* buffer, double* value) {
+	// Assumes big-endian architecture
+	uint64_t temp;
+	buffer = deserialize_int64_value(buffer, &temp);
+	memcpy(value, &temp, sizeof(double));
+	return buffer;
+}
+
+unsigned char* deserialize_int_value(unsigned char* buffer, int* value) {
+	/* Deserialize 4 bytes from buffer and store as an integer. Assumes big-endian encoding. */
+	*value = (buffer[0] << 24) | (buffer[1] << 16) | (buffer[2] << 8) | buffer[3];
+	return buffer + 4;
+}
+
+unsigned char* deserialize_char_value(unsigned char* buffer, char* value) {
+	/* Deserialize 1 byte from buffer and store as a character. */
+	*value = buffer[0];
+	return buffer + 1;
+}
+
+unsigned char* serialize_int_value(unsigned char* buffer, int value)
+{
+	/* Write big-endian int value into buffer; assumes 32-bit int and 8-bit char. */
+	buffer[0] = value >> 24;
+	buffer[1] = value >> 16;
+	buffer[2] = value >> 8;
+	buffer[3] = value;
+	return buffer + 4;
+}
+
+unsigned char* serialize_char_value(unsigned char* buffer, char value)
+{
+	buffer[0] = value;
+	return buffer + 1;
+}
+
+unsigned char* serialize_SINR_Values_Reward(unsigned char* buffer, struct SINR_Values_Reward* value)
+{
+	for (int counter = 0; counter < num_UEs; counter++) {
+		buffer = serialize_double_value(buffer, value->SINRlist[counter]);
+	}	
+	for (int counter = 0; counter < num_UEs; counter++) {
+		buffer = serialize_double_value(buffer, value->throughputs_NETSIM[counter]);
+	}
+
+	buffer = serialize_double_value(buffer, value->reward);
+	return buffer;
+}
+
+unsigned char* deserialize_SINR_Values_Reward(unsigned char* buffer, struct SINR_Values_Reward* value)
+{
+	for (int counter = 0; counter < num_UEs; counter++) {
+		buffer = deserialize_double_value(buffer, &(value->SINRlist[counter]));
+	}
+	for (int counter = 0; counter < num_UEs; counter++) {
+		buffer = deserialize_double_value(buffer, &(value->throughputs_NETSIM[counter]));
+	}
+
+	buffer = deserialize_double_value(buffer, &(value->reward));
+	return buffer;
+}
+
+unsigned char* serialize_gNB_Powers(unsigned char* buffer, struct gNB_Powers* value)
+{
+	for (int counter = 0; counter < num_gNBs; counter++) {
+		buffer = serialize_double_value(buffer, value->gNBlist[counter]);
+	}
+
+	return buffer;
+}
+
+unsigned char* deserialize_gNB_Powers(unsigned char* buffer, struct gNB_Powers* value)
+{
+	for (int counter = 0; counter < num_gNBs; counter++) {
+		buffer = deserialize_double_value(buffer, &(value->gNBlist[counter]));
+	}
+	
+	return buffer;
+}
+
+unsigned char* deserialize_recv_Message(unsigned char* buffer, struct recv_Message* msg) {
+	buffer = deserialize_int_value(buffer, &(msg->msgType));
+
+	if (msg->msgType == RECV_gNB_POWERS) {
+		buffer = deserialize_gNB_Powers(buffer, (msg->data.powers));
+	}
+	else if (msg->msgType == RECV_REQUEST) {
+		buffer = deserialize_int_value(buffer, &(msg->data.requstValue));
+	}
+
+	return buffer;
+}
+
+SOCKET clientSocket;
+
+read_DeviceCount() {
+	int lineno = 0;
+	FILE* fp;
+	fp = fopen("DeviceCount.csv", "r");
+
+	if (fp == NULL) {
+		printf("Error opening file: DeviceCount.csv\n");
+		return;
+	}
+
+	int ueCount, gnbCount;
+	// Read the header line to skip it
+	fscanf(fp, "%*[^\n]\n");
+	// Read the data line
+	fscanf(fp, "%d,%d", &ueCount, &gnbCount);
+
+	num_gNBs = gnbCount;
+	num_UEs = ueCount;
+
+	fclose(fp);
+}
+bool listenForPython()
+{
+
+	struct addrinfo hints;
+	int iResult;
+	struct addrinfo* result = NULL;
+
+	ZeroMemory(&hints, sizeof(hints));
+	hints.ai_family = AF_INET;
+	hints.ai_socktype = SOCK_STREAM;
+	hints.ai_protocol = IPPROTO_TCP;
+	hints.ai_flags = AI_PASSIVE;
+
+	// Resolve the server address and port
+	iResult = getaddrinfo(NULL, DEFAULT_PORT, &hints, &result);
+	if (iResult != 0)
+	{
+		fprintf(stderr, "getaddrinfo failed with error: %d\n", iResult);
+		WSACleanup();
+		return false;
+	}
+
+	// Create a SOCKET for connecting to server
+	listenSocket = socket(result->ai_family, result->ai_socktype, result->ai_protocol);
+	if (listenSocket == INVALID_SOCKET)
+	{
+		fprintf(stderr, "socket failed with error: %ld\n", WSAGetLastError());
+		freeaddrinfo(result);
+		WSACleanup();
+		return false;
+	}
+
+	// Setup the TCP listening socket
+	iResult = bind(listenSocket, result->ai_addr, (int)result->ai_addrlen);
+	if (iResult == SOCKET_ERROR)
+	{
+		fprintf(stderr, "bind failed with error: %d\n", WSAGetLastError());
+		freeaddrinfo(result);
+		closesocket(listenSocket);
+		WSACleanup();
+		return false;
+	}
+
+	freeaddrinfo(result);
+
+
+	char recvbuf[DEFAULT_BUFLEN];
+	int recvbuflen = DEFAULT_BUFLEN;
+
+	iResult = listen(listenSocket, SOMAXCONN);
+	if (iResult == SOCKET_ERROR)
+	{
+		fprintf(stderr, "listen failed with error: %d\n", WSAGetLastError());
+		closesocket(listenSocket);
+		WSACleanup();
+		return false;
+	}
+	else
+		fprintf(stderr, "\nListening\n");
+
+	// Accept a client socket
+	clientSocket = accept(listenSocket, NULL, NULL);
+	if (clientSocket == INVALID_SOCKET)
+	{
+		fprintf(stderr, "accept failed with error: %d\n", WSAGetLastError());
+		closesocket(listenSocket);
+		WSACleanup();
+		return false;
+	}
+	else
+		fprintf(stderr, "\nAccepted\n");
+
+	return true;
+}
+__declspec(dllexport) void send_Random_SINRS_at_Episode_Start()
+{
+	struct SINR_Values_Reward* to_Send = malloc(sizeof(struct SINR_Values_Reward));
+	if (to_Send == NULL) {
+		fprintf(stderr, "Memory allocation failed for valuesToSend_Python\n");
+		return 1;
+	}
+	to_Send->SINRlist = malloc(num_UEs * sizeof(double));
+	if (to_Send->SINRlist == NULL) {
+		fprintf("stderr", "Memory Allocation falied for SINRList\n");
+		free(to_Send);
+		return 1;
+	}	
+	to_Send->throughputs_NETSIM = malloc(num_UEs * sizeof(double));
+	if (to_Send->throughputs_NETSIM == NULL) {
+		fprintf("stderr", "Memory Allocation falied for SINRList\n");
+		free(to_Send);
+		return 1;
+	}
+
+	for (int i = 0; i < num_UEs; i++) {
+		to_Send->SINRlist[i] = 0.0;
+		to_Send->throughputs_NETSIM[i] = 0.0;
+	}
+	to_Send->reward = 0.0;
+
+	//seed the random number generator
+	srand(time(NULL));
+
+	// Generate random SINR values for each UE
+	for (int i = 0; i < num_UEs; i++) {
+		int random_index = rand() % 4; // Generate a random index from 0 to 3
+		double choices[] = { -2.0, 4.0, 6.0, 8.0 }; // Array of SINR choices
+		to_Send->SINRlist[i] = choices[random_index];
+	}
+
+	//Initiilaze buffer to send data
+	unsigned char* buffer;
+	buffer = malloc(8 * (1+(2*num_UEs)));
+	unsigned char* ptr;
+	struct SINR_Values_Reward* temp = to_Send;
+
+	ptr = serialize_SINR_Values_Reward(buffer, temp);
+	int bytes_sent = send(clientSocket, buffer, ptr - buffer, 0);
+	if (bytes_sent == SOCKET_ERROR)
+	{
+		fprintf(stderr, "send failed with error: %d\n", WSAGetLastError());
+	}
+
+	if (to_Send != NULL) {
+		free(to_Send->SINRlist);
+		to_Send->SINRlist = NULL;
+		free(to_Send);
+		to_Send = NULL;
+	}
+	free(buffer);
+}
+
+
+
+
+
+__declspec(dllexport) void send_SINRS_Rewards_at_Time_Step(struct SINR_Values_Reward* Var)
+{
+	//Initiilaze buffer to send data
+	unsigned char buffer[1024], * ptr;
+	
+	ptr = serialize_SINR_Values_Reward(buffer, Var);
+	int bytes_sent = send(clientSocket, buffer, ptr - buffer, 0);
+	if (bytes_sent == SOCKET_ERROR)
+	{
+		printf("send failed with error: %d\n", WSAGetLastError());
+	}
+
+
+	//fprintf(stderr, "\nSent values are, ");
+	//for (int p = 0; p < num_UEs; p++) {
+	//	fprintf(stderr, "%lf", Var->SINRlist[p]);
+	//}
+	//fprintf(stderr, "%lf\n", Var->reward);
+}
+
+
+
+
+
+
+
+__declspec(dllexport) void handle_Send_Receive(struct SINR_Values_Reward* Param1, struct gNB_Powers* Param2) {
+
+	unsigned char buffer[1024];
+	int iResult = recv(clientSocket, buffer, sizeof(buffer), 0);
+	if (iResult <= 0) {
+		fprintf(stderr, "\nProblem occured, bye\n");
+	}
+	
+	deserialize_recv_Message(buffer, receivedMsg);
+
+	if (iResult > 0 && receivedMsg->msgType == RECV_gNB_POWERS) {
+
+		for (int k = 0; k < num_gNBs; k++) {
+			Param2->gNBlist[k] = receivedMsg->data.powers->gNBlist[k];
+		}
+			
+		//fprintf(stderr, "\nReceived values are %lf, %lf, %lf, .....", receivedMsg->data.powers->gNBlist[0], receivedMsg->data.powers->gNBlist[1], receivedMsg->data.powers->gNBlist[2]);
+
+		int ack_msg = step_count;
+		unsigned char ack_buffer[4], * ptr;
+		ptr = serialize_int_value(ack_buffer, &ack_msg);
+		int bytes_sent = send(clientSocket, ack_buffer, ptr - ack_buffer, 0);
+		if (bytes_sent == SOCKET_ERROR)
+		{
+			fprintf(stderr, "send failed with error: %d\n", WSAGetLastError());
+		}
+
+	}
+	else if (iResult > 0 && receivedMsg->msgType == RECV_REQUEST && receivedMsg->data.requstValue == 0) {
+		send_SINRS_Rewards_at_Time_Step(Param1); 
+		//fprintf(stderr, "\nSent values at the start of the episode\n");
+	}
+	else if (iResult > 0 && receivedMsg->msgType == RECV_REQUEST && receivedMsg->data.requstValue == 2) {
+		send_SINRS_Rewards_at_Time_Step(Param1);
+		//fprintf(stderr, "\nSent values at a time step\n");
+	}
+	else if (iResult == 0) {
+		//fprintf(stderr, "\nConnection closing...\n");
+	}
+	else {
+		fprintf(stderr, "\nrecv failed with error: %d\n", WSAGetLastError());
+		//closesocket(clientSocket);
+	}
+}
+
+
+
+
+
+
+
+
+
+
+__declspec(dllexport) void init_waiting_struct_socket1()
+{
+
+	read_DeviceCount();
+	fprintf(stderr, "\nInitialising Winsock...");
+	if (WSAStartup(MAKEWORD(2, 2), &wsa) != 0)
+	{
+		fprintf(stderr, "Failed. Error Code : %d\n", WSAGetLastError());
+		return;
+	}
+	fprintf(stderr, "Initialized.\n");
+
+	receivedMsg = malloc(sizeof(struct recv_Message));
+	if (receivedMsg == NULL) {
+		fprintf(stderr, "Memory allocation failed for recv_Message\n");
+		return 1; // Return an error code or handle the failure appropriately
+	}
+
+
+	receivedMsg->data.powers = malloc(sizeof(struct gNB_Powers));
+	if (receivedMsg->data.powers == NULL) {
+		fprintf(stderr, "Memory allocation failed for receivedValue_From_Python\n");
+		//free(receivedMsg->msgType);
+		free(receivedMsg);
+		return 1;
+	}
+
+	receivedMsg->data.powers->gNBlist = malloc(num_gNBs * sizeof(double));
+	if (receivedMsg->data.powers->gNBlist == NULL) {
+		fprintf(stderr, "Memory allocation failed for gNBlist\n");
+		free(receivedMsg->data.powers);
+		//free(receivedMsg->msgType);
+		free(receivedMsg);
+		return 1;
+	}
+
+	receivedMsg->msgType = 5;
+	for (int i = 0; i < num_gNBs; i++) { // Assuming num_gNBs is 3
+		receivedMsg->data.powers->gNBlist[i] = 0.0; // Initialize the elements of gNBlist
+	}
+	receivedMsg->data.requstValue = 0;
+
+	bool a = listenForPython();
+
+}
+
+//__declspec(dllexport) void recv_gNB_Powers(struct gNB_Powers* Var)
+//{
+//	struct gNB_Powers to_recv = { {0.0,0.0,0.0} };
+//	struct gNB_Powers* temp = &to_recv;
+//
+//	unsigned char buffer[28];
+//	int iResult = recv(clientSocket, buffer, sizeof(buffer), 0);
+//	fprintf(stderr, "Buffer, No of bytes received: %s, %d", buffer, iResult);
+//	deserialize_gNB_Powers(buffer, temp);
+//	fprintf(stderr, "\nReceived Data at a particular time_step\n");
+//
+//	for (int i = 0; i < num_gNBs; i++)
+//	{
+//		Var->gNBlist[i] = temp->gNBlist[i];
+//	}
+//}

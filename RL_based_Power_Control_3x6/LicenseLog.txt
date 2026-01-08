@@ -1,0 +1,21 @@
+Gathering license information
+Server = .
+Version type = std
+Lock type = rlm_hw
+Version = 14.2
+Checking for all license
+License for all is received
+Checking for add-on licenses
+Checking for 100 license
+License received for 100
+Checking for 101 license
+
+Checking for 102 license
+License received for 102
+Checking for 103 license
+
+Checking for 104 license
+
+
+Time taken is 1187
+Installing heart-beat.

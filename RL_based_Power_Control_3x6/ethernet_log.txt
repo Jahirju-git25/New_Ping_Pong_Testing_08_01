@@ -1,0 +1,52 @@
+Device 2, Port 2: Setting port state as Forwarding
+
+Device 3, Port 2: Setting port state as Forwarding
+
+Device 7, Port 2: Setting port state as Forwarding
+
+Device 8, Port 1: Setting port state as Forwarding
+
+Device 9, Port 1: Setting port state as Forwarding
+
+Device 9, Port 3: Setting port state as Forwarding
+
+Device 10, Port 1: Setting port state as Forwarding
+
+Device 10, Port 3: Setting port state as Forwarding
+
+Device 11, Port 1: Setting port state as Forwarding
+
+Device 11, Port 3: Setting port state as Forwarding
+
+Starting SPT protocol for device 4, LAN 1
+Stating SPT for LAN 0
+Port 1, Setting status as Forwarding
+Port 2, Setting status as Forwarding
+Port 3, Setting status as Forwarding
+Port 4, Setting status as Forwarding
+Starting as root
+Root Id = 1155D00004001
+Sending config BPDU
+Root Id = 1155D00004001, Root path cost = 19, Bridge Id = 1155D00004001
+
+Starting SPT protocol for device 5, LAN 1
+Stating SPT for LAN 0
+Port 1, Setting status as Forwarding
+Port 2, Setting status as Forwarding
+Port 3, Setting status as Forwarding
+Port 4, Setting status as Forwarding
+Starting as root
+Root Id = 1155D00005001
+Sending config BPDU
+Root Id = 1155D00005001, Root path cost = 19, Bridge Id = 1155D00005001
+
+Starting SPT protocol for device 6, LAN 1
+Stating SPT for LAN 0
+Port 1, Setting status as Forwarding
+Port 2, Setting status as Forwarding
+Port 3, Setting status as Forwarding
+Starting as root
+Root Id = 1155D00006001
+Sending config BPDU
+Root Id = 1155D00006001, Root path cost = 19, Bridge Id = 1155D00006001
+

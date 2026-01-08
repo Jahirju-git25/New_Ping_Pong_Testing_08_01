@@ -1,0 +1,53 @@
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(517,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (NetSim_Server.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  Listener.c
+C:\Users\paul\Documents\NetSim\Workspaces\PythonInterfacing_v1\src\Simulation\NetSim_Server\Listener.c(102,7): warning C4101: 'recvbuf': unreferenced local variable
+  NetSim_Server_Log.c
+  Struct_Listener.c
+C:\Users\paul\Documents\NetSim\Workspaces\PythonInterfacing_v1\src\Simulation\NetSim_Server\Struct_Listener.c(34,20): warning C4244: '=': conversion from 'uint64_t' to 'unsigned char', possible loss of data
+C:\Users\paul\Documents\NetSim\Workspaces\PythonInterfacing_v1\src\Simulation\NetSim_Server\Struct_Listener.c(35,20): warning C4244: '=': conversion from 'uint64_t' to 'unsigned char', possible loss of data
+C:\Users\paul\Documents\NetSim\Workspaces\PythonInterfacing_v1\src\Simulation\NetSim_Server\Struct_Listener.c(36,20): warning C4244: '=': conversion from 'uint64_t' to 'unsigned char', possible loss of data
+C:\Users\paul\Documents\NetSim\Workspaces\PythonInterfacing_v1\src\Simulation\NetSim_Server\Struct_Listener.c(37,20): warning C4244: '=': conversion from 'uint64_t' to 'unsigned char', possible loss of data
+C:\Users\paul\Documents\NetSim\Workspaces\PythonInterfacing_v1\src\Simulation\NetSim_Server\Struct_Listener.c(38,20): warning C4244: '=': conversion from 'uint64_t' to 'unsigned char', possible loss of data
+C:\Users\paul\Documents\NetSim\Workspaces\PythonInterfacing_v1\src\Simulation\NetSim_Server\Struct_Listener.c(39,20): warning C4244: '=': conversion from 'uint64_t' to 'unsigned char', possible loss of data
+C:\Users\paul\Documents\NetSim\Workspaces\PythonInterfacing_v1\src\Simulation\NetSim_Server\Struct_Listener.c(40,14): warning C4244: '=': conversion from 'uint64_t' to 'unsigned char', possible loss of data
+C:\Users\paul\Documents\NetSim\Workspaces\PythonInterfacing_v1\src\Simulation\NetSim_Server\Struct_Listener.c(220,32): warning C4047: 'function': 'char *' differs in levels of indirection from 'unsigned char (*)[32]'
+C:\Users\paul\Documents\NetSim\Workspaces\PythonInterfacing_v1\src\Simulation\NetSim_Server\Struct_Listener.c(220,32): warning C4024: 'recv': different types for formal and actual parameter 2
+C:\Users\paul\Documents\NetSim\Workspaces\PythonInterfacing_v1\src\Simulation\NetSim_Server\Struct_Listener.c(247,39): warning C4244: 'function': conversion from '__int64' to 'int', possible loss of data
+C:\Users\paul\Documents\NetSim\Workspaces\PythonInterfacing_v1\src\Simulation\NetSim_Server\Struct_Listener.c(195,7): warning C4101: 'recvbuf': unreferenced local variable
+  Waiting_Struct_Listener.c
+C:\Users\paul\Documents\NetSim\Workspaces\PythonInterfacing_v1\src\Simulation\NetSim_Server\Waiting_Struct_Listener.c(55,20): warning C4244: '=': conversion from 'uint64_t' to 'unsigned char', possible loss of data
+C:\Users\paul\Documents\NetSim\Workspaces\PythonInterfacing_v1\src\Simulation\NetSim_Server\Waiting_Struct_Listener.c(56,20): warning C4244: '=': conversion from 'uint64_t' to 'unsigned char', possible loss of data
+C:\Users\paul\Documents\NetSim\Workspaces\PythonInterfacing_v1\src\Simulation\NetSim_Server\Waiting_Struct_Listener.c(57,20): warning C4244: '=': conversion from 'uint64_t' to 'unsigned char', possible loss of data
+C:\Users\paul\Documents\NetSim\Workspaces\PythonInterfacing_v1\src\Simulation\NetSim_Server\Waiting_Struct_Listener.c(58,20): warning C4244: '=': conversion from 'uint64_t' to 'unsigned char', possible loss of data
+C:\Users\paul\Documents\NetSim\Workspaces\PythonInterfacing_v1\src\Simulation\NetSim_Server\Waiting_Struct_Listener.c(59,20): warning C4244: '=': conversion from 'uint64_t' to 'unsigned char', possible loss of data
+C:\Users\paul\Documents\NetSim\Workspaces\PythonInterfacing_v1\src\Simulation\NetSim_Server\Waiting_Struct_Listener.c(60,20): warning C4244: '=': conversion from 'uint64_t' to 'unsigned char', possible loss of data
+C:\Users\paul\Documents\NetSim\Workspaces\PythonInterfacing_v1\src\Simulation\NetSim_Server\Waiting_Struct_Listener.c(61,14): warning C4244: '=': conversion from 'uint64_t' to 'unsigned char', possible loss of data
+C:\Users\paul\Documents\NetSim\Workspaces\PythonInterfacing_v1\src\Simulation\NetSim_Server\Waiting_Struct_Listener.c(324,7): warning C4101: 'recvbuf': unreferenced local variable
+C:\Users\paul\Documents\NetSim\Workspaces\PythonInterfacing_v1\src\Simulation\NetSim_Server\Waiting_Struct_Listener.c(369,8): warning C4013: 'time' undefined; assuming extern returning int
+C:\Users\paul\Documents\NetSim\Workspaces\PythonInterfacing_v1\src\Simulation\NetSim_Server\Waiting_Struct_Listener.c(396,38): warning C4244: 'function': conversion from '__int64' to 'int', possible loss of data
+C:\Users\paul\Documents\NetSim\Workspaces\PythonInterfacing_v1\src\Simulation\NetSim_Server\Waiting_Struct_Listener.c(444,38): warning C4244: 'function': conversion from '__int64' to 'int', possible loss of data
+  Waiting_Struct_Listener_v2.c
+C:\Users\paul\Documents\NetSim\Workspaces\PythonInterfacing_v1\src\Simulation\NetSim_Server\Waiting_Struct_Listener_v2.c(53,20): warning C4244: '=': conversion from 'uint64_t' to 'unsigned char', possible loss of data
+C:\Users\paul\Documents\NetSim\Workspaces\PythonInterfacing_v1\src\Simulation\NetSim_Server\Waiting_Struct_Listener_v2.c(54,20): warning C4244: '=': conversion from 'uint64_t' to 'unsigned char', possible loss of data
+C:\Users\paul\Documents\NetSim\Workspaces\PythonInterfacing_v1\src\Simulation\NetSim_Server\Waiting_Struct_Listener_v2.c(55,20): warning C4244: '=': conversion from 'uint64_t' to 'unsigned char', possible loss of data
+C:\Users\paul\Documents\NetSim\Workspaces\PythonInterfacing_v1\src\Simulation\NetSim_Server\Waiting_Struct_Listener_v2.c(56,20): warning C4244: '=': conversion from 'uint64_t' to 'unsigned char', possible loss of data
+C:\Users\paul\Documents\NetSim\Workspaces\PythonInterfacing_v1\src\Simulation\NetSim_Server\Waiting_Struct_Listener_v2.c(57,20): warning C4244: '=': conversion from 'uint64_t' to 'unsigned char', possible loss of data
+C:\Users\paul\Documents\NetSim\Workspaces\PythonInterfacing_v1\src\Simulation\NetSim_Server\Waiting_Struct_Listener_v2.c(58,20): warning C4244: '=': conversion from 'uint64_t' to 'unsigned char', possible loss of data
+C:\Users\paul\Documents\NetSim\Workspaces\PythonInterfacing_v1\src\Simulation\NetSim_Server\Waiting_Struct_Listener_v2.c(59,14): warning C4244: '=': conversion from 'uint64_t' to 'unsigned char', possible loss of data
+C:\Users\paul\Documents\NetSim\Workspaces\PythonInterfacing_v1\src\Simulation\NetSim_Server\Waiting_Struct_Listener_v2.c(245,7): warning C4101: 'recvbuf': unreferenced local variable
+C:\Users\paul\Documents\NetSim\Workspaces\PythonInterfacing_v1\src\Simulation\NetSim_Server\Waiting_Struct_Listener_v2.c(280,11): warning C4098: 'send_Random_SINRS_at_Episode_Start': 'void' function returning a value
+C:\Users\paul\Documents\NetSim\Workspaces\PythonInterfacing_v1\src\Simulation\NetSim_Server\Waiting_Struct_Listener_v2.c(284,11): warning C4133: 'function': incompatible types - from 'char [7]' to 'FILE *const '
+C:\Users\paul\Documents\NetSim\Workspaces\PythonInterfacing_v1\src\Simulation\NetSim_Server\Waiting_Struct_Listener_v2.c(286,11): warning C4098: 'send_Random_SINRS_at_Episode_Start': 'void' function returning a value
+C:\Users\paul\Documents\NetSim\Workspaces\PythonInterfacing_v1\src\Simulation\NetSim_Server\Waiting_Struct_Listener_v2.c(295,8): warning C4013: 'time' undefined; assuming extern returning int
+C:\Users\paul\Documents\NetSim\Workspaces\PythonInterfacing_v1\src\Simulation\NetSim_Server\Waiting_Struct_Listener_v2.c(309,50): warning C4244: 'function': conversion from '__int64' to 'int', possible loss of data
+C:\Users\paul\Documents\NetSim\Workspaces\PythonInterfacing_v1\src\Simulation\NetSim_Server\Waiting_Struct_Listener_v2.c(362,50): warning C4244: 'function': conversion from '__int64' to 'int', possible loss of data
+C:\Users\paul\Documents\NetSim\Workspaces\PythonInterfacing_v1\src\Simulation\NetSim_Server\Waiting_Struct_Listener_v2.c(422,41): warning C4047: 'function': 'int' differs in levels of indirection from 'int *'
+C:\Users\paul\Documents\NetSim\Workspaces\PythonInterfacing_v1\src\Simulation\NetSim_Server\Waiting_Struct_Listener_v2.c(422,41): warning C4024: 'serialize_int_value': different types for formal and actual parameter 2
+C:\Users\paul\Documents\NetSim\Workspaces\PythonInterfacing_v1\src\Simulation\NetSim_Server\Waiting_Struct_Listener_v2.c(423,55): warning C4244: 'function': conversion from '__int64' to 'int', possible loss of data
+C:\Users\paul\Documents\NetSim\Workspaces\PythonInterfacing_v1\src\Simulation\NetSim_Server\Waiting_Struct_Listener_v2.c(469,11): warning C4098: 'init_waiting_struct_socket1': 'void' function returning a value
+C:\Users\paul\Documents\NetSim\Workspaces\PythonInterfacing_v1\src\Simulation\NetSim_Server\Waiting_Struct_Listener_v2.c(477,11): warning C4098: 'init_waiting_struct_socket1': 'void' function returning a value
+C:\Users\paul\Documents\NetSim\Workspaces\PythonInterfacing_v1\src\Simulation\NetSim_Server\Waiting_Struct_Listener_v2.c(486,11): warning C4098: 'init_waiting_struct_socket1': 'void' function returning a value
+  Generating Code...
+     Creating library ..\lib_x64\NetSim_Python_Interfacing.lib and object ..\lib_x64\NetSim_Python_Interfacing.exp
+  NetSim_Server.vcxproj -> C:\Users\paul\Documents\NetSim\Workspaces\PythonInterfacing_v1\bin_x64\NetSim_Python_Interfacing.dll

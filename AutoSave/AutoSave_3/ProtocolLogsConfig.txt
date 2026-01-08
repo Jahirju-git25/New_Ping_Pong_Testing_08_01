@@ -1,0 +1,4 @@
+LTENR_Radio_Measurements_Log=True
+LTENR_Radio_Resource_Allocation=False
+LTENR_CODEBLOCK_LOG=False
+LTENR_HANDOVER_LOG=True
